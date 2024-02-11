@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassesPanel));
             button1 = new Button();
+            textBox1 = new TextBox();
+            NameLabel = new Label();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(241, 151);
+            button1.Location = new Point(545, 181);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
@@ -41,18 +44,42 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // ClassesControl
+            // textBox1
+            // 
+            textBox1.Location = new Point(32, 507);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(248, 27);
+            textBox1.TabIndex = 1;
+            // 
+            // NameLabel
+            // 
+            NameLabel.AutoSize = true;
+            NameLabel.Location = new Point(338, 42);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new Size(50, 20);
+            NameLabel.TabIndex = 2;
+            NameLabel.Text = "label1";
+            // 
+            // ClassesPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
+            Controls.Add(NameLabel);
+            Controls.Add(textBox1);
             Controls.Add(button1);
-            Name = "ClassesControl";
-            Size = new Size(570, 358);
+            DoubleBuffered = true;
+            Name = "ClassesPanel";
+            Size = new Size(800, 600);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
+        private TextBox textBox1;
+        private Label NameLabel;
     }
 }
