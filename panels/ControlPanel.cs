@@ -13,12 +13,12 @@ using WinFormsApp1;
 
 namespace SchoolManagementSystem.UserControls
 {
-    public partial class ControlPanalControl : UserControl
+    public partial class ControlPanel : UserControl
     {
         private StudentService _st;
         private AccountManager _accountManager;
         private ControlsService _nav;
-        public ControlPanalControl(ControlsService nav,StudentService st,AccountManager accountManager)
+        public ControlPanel(ControlsService nav,StudentService st,AccountManager accountManager)
         {
             InitializeComponent();
             _st = st;

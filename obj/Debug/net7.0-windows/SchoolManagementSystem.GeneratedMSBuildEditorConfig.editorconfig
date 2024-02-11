@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SchoolManagementSystem
-build_property.ProjectDir = D:\vscode\DSProject\LMS\
+build_property.ProjectDir = C:\Users\mosta\OneDrive\سطح المكتب\sbme 26\projects\LMS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

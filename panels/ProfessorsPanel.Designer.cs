@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagementSystem.UserControls
 {
-    partial class professorsControl
+    partial class ProfessorsPanel
     {
         /// <summary> 
         /// Required designer variable.

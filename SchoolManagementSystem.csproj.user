@@ -7,16 +7,19 @@
     <Compile Update="Forms\SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControls\ClassesControl.cs">
+    <Compile Update="LMS\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="panels\ClassesPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\ControlPanalControl.cs">
+    <Compile Update="panels\ControlPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\ProfessorsControl.cs">
+    <Compile Update="panels\ProfessorsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\StudentsControl.cs">
+    <Compile Update="panels\StudentsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

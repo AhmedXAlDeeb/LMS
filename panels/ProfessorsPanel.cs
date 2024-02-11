@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem.UserControls
 {
-    public partial class StudentsControl : UserControl
+    public partial class ProfessorsPanel : UserControl
     {
         private ControlsService _nav;
-        private StudentService _st;
-        public StudentsControl(ControlsService nav,StudentService st)
+        private ProfessorService _pf;
+        public ProfessorsPanel(ControlsService nav,ProfessorService pf)
         {
             InitializeComponent();
             _nav = nav;
-            _st = st;
+            _pf = pf;
         }
     }
 }

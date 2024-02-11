@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagementSystem.UserControls
 {
-    partial class StudentsControl
+    partial class ControlPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,10 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            test = new Button();
+            SuspendLayout();
+            // 
+            // test
+            // 
+            test.Location = new Point(68, 172);
+            test.Name = "test";
+            test.Size = new Size(94, 29);
+            test.TabIndex = 0;
+            test.Text = "test";
+            test.UseVisualStyleBackColor = true;
+            test.Click += test_Click;
+            // 
+            // ControlPanalControl
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(test);
+            Name = "ControlPanalControl";
+            Size = new Size(771, 460);
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button test;
     }
 }

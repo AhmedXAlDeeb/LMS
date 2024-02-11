@@ -17,10 +17,10 @@ namespace WinFormsApp1
         {
             controls = new List<UserControl>
             {
-                new ClassesControl(_nav,_cl , _st ,_pf),
-                new professorsControl(_nav,_pf),
-                new StudentsControl(_nav,_st),
-                new ControlPanalControl(_nav,_st,_ac)
+                new ClassesPanel(_nav,_cl , _st ,_pf),
+                new ProfessorsPanel(_nav,_pf),
+                new StudentsPanel(_nav,_st),
+                new ControlPanel(_nav,_st,_ac)
             };
             _nav.Initialize(controls,MainPanel);
             _nav.Display(_nav.controlPanalControl);
