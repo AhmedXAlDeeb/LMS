@@ -22,22 +22,22 @@ namespace WinFormsApp1
                 new StudentsPanel(_nav,_st),
                 new ControlPanel(_nav,_st,_ac)
             };
-            _nav.Initialize(controls,MainPanel);
-            _nav.Display(_nav.controlPanalControl);
+            _nav.Initialize(controls, MainPanel);
+            _nav.Display(_nav.classesPanel);
         }
         public MainForm(
          StudentService st
-        ,AccountManager accountManager
-        ,ControlsService nav
-        ,ClassService cl
-        ,ProfessorService pf)
+        , AccountManager accountManager
+        , ControlsService nav
+        , ClassService cl
+        , ProfessorService pf)
         {
             _st = st;
             _nav = nav;
             _ac = accountManager;
             _cl = cl;
             _pf = pf;
-            
+
             InitializeComponent();
             InitializeControls(); // Adding other panels to the main form
         }

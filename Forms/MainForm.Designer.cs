@@ -35,16 +35,16 @@
             // 
             MainPanel.AccessibleName = "mainPanel";
             MainPanel.BorderStyle = BorderStyle.FixedSingle;
-            MainPanel.Location = new Point(135, 37);
+            MainPanel.Location = new Point(229, 1);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(543, 401);
+            MainPanel.Size = new Size(800, 600);
             MainPanel.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(721, 450);
+            ClientSize = new Size(1029, 602);
             Controls.Add(MainPanel);
             Name = "MainForm";
             Text = "MainForm";
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private  Panel MainPanel;
+        private Panel MainPanel;
     }
 }

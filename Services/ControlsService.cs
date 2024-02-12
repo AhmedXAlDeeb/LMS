@@ -11,10 +11,10 @@ namespace SchoolManagementSystem.Services
     {
         private List<UserControl> controls;
         private Panel panel;
-        public readonly int classesControl = 0;
-        public readonly int professorsControl = 1;
-        public readonly int studentsControl = 2;
-        public readonly int controlPanalControl = 3;
+        public readonly int classesPanel = 0;
+        public readonly int professorsPanel = 1;
+        public readonly int studentsPanel = 2;
+        public readonly int controlPanel = 3;
         public ControlsService()
         {
         }

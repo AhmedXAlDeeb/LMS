@@ -7,9 +7,6 @@
     <Compile Update="Forms\SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LMS\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="panels\ClassesPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

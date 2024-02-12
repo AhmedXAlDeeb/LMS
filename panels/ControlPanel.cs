@@ -28,7 +28,7 @@ namespace SchoolManagementSystem.UserControls
 
         private void test_Click(object sender, EventArgs e)
         {
-            _nav.Display(_nav.classesControl);
+            _nav.Display(_nav.classesPanel);
         }
         
     }
