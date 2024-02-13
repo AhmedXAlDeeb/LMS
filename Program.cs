@@ -1,3 +1,4 @@
+using DSproject;
 using Microsoft.Extensions.DependencyInjection;
 using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Services;
@@ -31,7 +32,7 @@ namespace WinFormsApp1
             using ServiceProvider serviceProvider = services.BuildServiceProvider();
             var mainForm = serviceProvider.GetRequiredService<MainForm>();
 
-            Application.Run(mainForm);
+            Application.Run(new SignIn());
         }
     }
 }

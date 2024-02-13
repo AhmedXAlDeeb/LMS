@@ -11,14 +11,14 @@ using System.Windows.Forms;
 namespace DSproject
 {
 
-    public partial class Form1 : Form
+    public partial class SignIn : Form
     {
-        private readonly AccountManager accountManager;
+        //private readonly AccountManager accountManager;
 
-        public Form1()
+        public SignIn()
         {
             InitializeComponent();
-           accountManager = new AccountManager(new AppDbContext());
+           //accountManager = new AccountManager(new AppDbContext());
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -65,17 +65,17 @@ namespace DSproject
             string userName = textBox1.Text;
             string password = textBox2.Text;
 
-            if (accountManager.SignIn(userName, password))
-            {
-                //launching el homepage b2a .. el message box is temporary 
-                MessageBox.Show("Login successful!");
-                Close();
-            }
+            //if (accountManager.SignIn(userName, password))
+            //{
+            //    //launching el homepage b2a .. el message box is temporary 
+            //    MessageBox.Show("Login successful!");
+            //    Close();
+            //}
           
-            else
-            {
-                MessageBox.Show("Login failed. Please check your credentials.");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Login failed. Please check your credentials.");
+            //}
 
          
         }

@@ -140,7 +140,6 @@ D:\vscode\DSProject\LMS\bin\Debug\net7.0-windows\runtimes\win-x86\native\Microso
 D:\vscode\DSProject\LMS\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\SchoolManagementSystem.csproj.AssemblyReference.cache
 D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\WinFormsApp1.MainForm.resources
-D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\SchoolManagementSystem.SignInForm.resources
 D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\SchoolManagementSystem.UserControls.ClassesPanel.resources
 D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\SchoolManagementSystem.UserControls.ControlPanel.resources
 D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\SchoolManagementSystem.UserControls.ProfessorsPanel.resources
@@ -212,3 +211,5 @@ C:\Users\mosta\OneDrive\سطح المكتب\sbme 26\projects\LMS\bin\Debug\net7.
 C:\Users\mosta\OneDrive\سطح المكتب\sbme 26\projects\LMS\obj\Debug\net7.0-windows\SchoolManagementSystem.csproj.CopyComplete
 C:\Users\mosta\OneDrive\سطح المكتب\sbme 26\projects\LMS\obj\Debug\net7.0-windows\SchoolManagementSystem.genruntimeconfig.cache
 C:\Users\mosta\OneDrive\سطح المكتب\sbme 26\projects\LMS\obj\Debug\net7.0-windows\ref\SchoolManagementSystem.dll
+D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\DSproject.SignUP.resources
+D:\vscode\DSProject\LMS\obj\Debug\net7.0-windows\DSproject.SignIn.resources

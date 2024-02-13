@@ -12,11 +12,11 @@ namespace DSproject
 {
     public partial class SignUP : Form
     {
-        private readonly AccountManager accountManager;
+        //private readonly AccountManager accountManager;
         public SignUP()
         {
             InitializeComponent();
-            accountManager = new AccountManager(new AppDbContext());
+            //accountManager = new AccountManager(new AppDbContext());
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -46,16 +46,16 @@ namespace DSproject
             }
             else
             {
-                if (accountManager.SignUp(userName, password))
-                {
-                    MessageBox.Show("Sign-up successful!");
-                    // launching another window
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Username already exists. Please choose a different username.");
-                }
+                //if (accountManager.SignUp(userName, password))
+                //{
+                //    MessageBox.Show("Sign-up successful!");
+                //    // launching another window
+                //    this.Close();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Username already exists. Please choose a different username.");
+                //}
 
             }
 
