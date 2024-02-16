@@ -15,11 +15,36 @@ namespace SchoolManagementSystem.UserControls
     {
         private ControlsService _nav;
         private ProfessorService _pf;
-        public ProfessorsPanel(ControlsService nav,ProfessorService pf)
+        public ProfessorsPanel(ControlsService nav, ProfessorService pf)
         {
             InitializeComponent();
             _nav = nav;
             _pf = pf;
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            StudentsTable.FirstDisplayedScrollingRowIndex = StudentsTable.Rows[e.OldValue].Index;
+        }
+
+        private void StudentsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void StudentsTable_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            vScrollBar1.Maximum = StudentsTable.RowCount;
+        }
+
+        private void StudentsTable_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            vScrollBar1.Maximum = StudentsTable.RowCount;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

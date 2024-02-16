@@ -32,7 +32,8 @@ namespace WinFormsApp1
             using ServiceProvider serviceProvider = services.BuildServiceProvider();
             var mainForm = serviceProvider.GetRequiredService<MainForm>();
 
-            Application.Run(new SignIn());
+            //Application.Run(new SignIn());
+            Application.Run(mainForm);
         }
     }
 }

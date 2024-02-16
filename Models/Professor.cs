@@ -14,5 +14,7 @@ namespace SchoolManagementSystem.Models
         public int? age { get; set; }
         public string? phone { get; set; }
         public string? email { get; set; }
+
+        public string? title { get; set;}
     }
 }

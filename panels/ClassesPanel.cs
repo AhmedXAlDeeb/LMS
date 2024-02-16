@@ -27,16 +27,22 @@ namespace SchoolManagementSystem.UserControls
             _st = st;
             _pf = pf;
             List<Student> ClassStudents = new List<Student>();
-            for (int i = 0; i < 100; i++)
-            {
-                StudentsTable.Rows.Add(new object[]
-                {
-                    i,2,3
-                }) ;
-            }
+            InitalaizeTable();
         }
         //sample data
 
+        private void InitalaizeTable()
+        {
+            var classes = _cl.GetAll();
+            var students = _st.AllClassStudents(classes[0].code);
+            for (int i = 0; i < students.Count; i++)
+            {
+                StudentsTable.Rows.Add(new object[]
+                {
+                    $"{students[i].firstName} {students[i].lastName}" ,$"{students[i].id}",$"{students[i].grade}"
+                });
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -66,6 +72,27 @@ namespace SchoolManagementSystem.UserControls
         private void StudentsTable_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             vScrollBar1.Maximum = StudentsTable.RowCount;
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            StudentsTable.Rows.Clear();
+            var classes = _cl.GetAll();
+            var students = _st.AllClassStudents(classes[0].code);
+            string fullName = textBox1.Text;
+            Filter filter = new Filter();
+            filter.SetName(fullName);
+            filter.classCode = classes[0].code;
+            List<Student> searchResut = _st.GetBy(filter);
+
+            for (int i = 0; i < searchResut.Count; i++)
+            {
+                StudentsTable.Rows.Add(new object[]
+                {
+                    $"{searchResut[i].firstName} {searchResut[i].lastName}" ,$"{searchResut[i].id}",$"{searchResut[i].grade}"
+                });
+            }
+
         }
     }
 }

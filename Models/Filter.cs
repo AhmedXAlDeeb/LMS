@@ -18,10 +18,10 @@ namespace SchoolManagementSystem.Models
         public bool SetName(string fullName)
         {
             var Name = fullName.Split(' ');
-            if(fullName.Length == 1 )
+            if(Name.Length == 1 )
                 firstName = Name[0];
             
-            else if( fullName.Length == 2 ) { 
+            else if(Name.Length == 2 ) { 
                 firstName= Name[0];
                 lastName = Name[1];
             }

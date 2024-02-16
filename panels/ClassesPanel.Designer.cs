@@ -41,6 +41,7 @@
             ID = new DataGridViewTextBoxColumn();
             Grade = new DataGridViewTextBoxColumn();
             vScrollBar1 = new VScrollBar();
+            SearchButton = new Button();
             ((System.ComponentModel.ISupportInitialize)StudentsTable).BeginInit();
             SuspendLayout();
             // 
@@ -149,12 +150,23 @@
             vScrollBar1.TabIndex = 5;
             vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
+            // SearchButton
+            // 
+            SearchButton.Location = new Point(153, 465);
+            SearchButton.Name = "SearchButton";
+            SearchButton.Size = new Size(94, 29);
+            SearchButton.TabIndex = 6;
+            SearchButton.Text = "search";
+            SearchButton.UseVisualStyleBackColor = true;
+            SearchButton.Click += SearchButton_Click;
+            // 
             // ClassesPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
+            Controls.Add(SearchButton);
             Controls.Add(StudentsTable);
             Controls.Add(vScrollBar1);
             Controls.Add(textBox1);
@@ -178,5 +190,6 @@
         private DataGridViewTextBoxColumn Name;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Grade;
+        private Button SearchButton;
     }
 }
