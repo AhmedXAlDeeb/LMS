@@ -46,5 +46,10 @@ namespace SchoolManagementSystem.UserControls
         {
 
         }
+
+        private void ProfessorsPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
