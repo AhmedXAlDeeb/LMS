@@ -17,7 +17,7 @@ namespace WinFormsApp1
         {
             controls = new List<UserControl>
             {
-                new ClassesPanel(_nav,_cl , _st ,_pf),
+                new ClassProfilePanel(_nav,_cl , _st ,_pf),
                 new ProfessorsPanel(_nav,_pf),
                 new StudentsPanel(_nav,_st),
                 new ControlPanel(_nav,_st,_ac)

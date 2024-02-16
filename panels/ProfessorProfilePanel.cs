@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem.panels
 {
-    public partial class ClassesPanel : UserControl
+    public partial class ProfessorProfilePanel : UserControl
     {
-        public ClassesPanel()
+        public ProfessorProfilePanel()
         {
             InitializeComponent();
         }

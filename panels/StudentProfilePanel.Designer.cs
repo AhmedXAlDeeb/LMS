@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagementSystem.panels
 {
-    partial class ClassesPanel
+    partial class StudentProfilePanel
     {
         /// <summary> 
         /// Required designer variable.
