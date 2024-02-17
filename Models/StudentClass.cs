@@ -13,5 +13,7 @@ namespace SchoolManagementSystem.Models
         public int id { get; set; }
         public int studentId { get; set; }
         public string classCode { get; set; }
+        public int userId { get; set; }
+
     }
 }

@@ -26,8 +26,7 @@ namespace WinFormsApp1
                 new StudentProfilePanel(_nav,_cl , _st ,_pf)
             };
             _nav.Initialize(controls, MainPanel);
-            var dumyClass = _cl.GetAll()[0];
-            _nav.Display(_nav.classProfilePanel,dumyClass);
+            _nav.Display(_nav.classProfilePanel, _cl.GetAll()[0]);
         }
         public MainForm(
          StudentService st
@@ -41,10 +40,67 @@ namespace WinFormsApp1
             _ac = accountManager;
             _cl = cl;
             _pf = pf;
-
+            //AddDummyData();
+            //RemoveDummyData();
+            var user = new Admin()
+            {
+                userName = "test",
+                password = "123"
+            };
+            _ac.SignIn(user.userName, user.password);
             InitializeComponent();
             InitializeControls(); // Adding other panels to the main form
         }
-
+        private void AddDummyData()
+        {
+            var user = new Admin()
+            {
+                userName = "Master",
+                password = "123"
+            };
+            _ac.SignUp(user.userName, user.password);
+            _ac.SignIn(user.userName, user.password);
+            var students = new List<Student>() {
+                new Student() {firstName = "salah",lastName = "mohamed" ,grade = 99 , age = 20},
+                new Student() {firstName = "omar",lastName = "mohamed" ,grade = 99 , age = 20},
+                new Student() {firstName = "ahmed",lastName = "mohamed" ,grade = 99 , age = 20},
+                new Student() {firstName = "mostafa",lastName = "ali" ,grade = 9 , age = 20},
+                new Student() {firstName = "enjy",lastName = "ashraf" ,grade = 99 , age = 20},
+                new Student() {firstName = "ali",lastName = "mohamed" ,grade = 99 , age = 20},
+                new Student() {firstName = "youssef",lastName = "mohamed" ,grade = 50 , age = 20},
+                new Student() {firstName = "khaled",lastName = "mohamed" ,grade = 99 , age = 20},
+                new Student() {firstName = "hend",lastName = "mohamed" ,grade = 70 , age = 20},
+                new Student() {firstName = "mohamed",lastName = "mohamed" ,grade = 99 , age = 20},
+            };
+            var profs = new List<Professor>() {
+                new Professor() {firstName = "wael",lastName="gom3a",title ="elskhra"},
+                new Professor() {firstName = "osama",lastName="ali",title ="test"}
+            };
+            
+            var classes = new List<Class>()
+            {
+                new Class(){code = "sbe1" ,hall="9823" ,time=2,name="sub1"},
+                new Class(){code = "sbe2" ,hall="3813" ,time=2,name="sub2"},
+                new Class(){code = "sbe3" ,hall="7863" ,time=2,name="sub3"},
+                new Class(){code = "sbe4" ,hall="6823" ,time=2,name="sub4"},
+            };
+            _st.Add(students);
+            _pf.Add(profs);
+            classes.ForEach(x => _cl.Add(x));
+            for(int i = 0;i < 5; i++)
+            {
+                _st.AssignToClass(students[i], classes[0].code);
+                _st.AssignToClass(students[i+5], classes[1].code);
+            }
+            _pf.AssignToClass(profs[0], classes[0].code);
+            _pf.AssignToClass(profs[1], classes[1].code);
+        }
+        private void RemoveDummyData()
+        {
+            _st.RemoveAll();
+            _pf.RemoveAll();
+            _cl.RemoveAll();
+            _ac.RemoveAll();
+        }
     }
 }

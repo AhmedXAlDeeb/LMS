@@ -12,9 +12,6 @@ namespace WinFormsApp1.Data
         public DbSet<ProfessorClass> professorClasses { get; set; }
         public DbSet<Class> classes { get; set; }
         public DbSet<Admin> admins { get; set; }
-        public DbSet<ClassUser> classUsers { get; set; }
-        public DbSet<ProfessorUser> professorUsers { get; set; }
-        public DbSet<StudentUser> studentUsers { get; set; }
 
         // Conecting the data base with the class 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

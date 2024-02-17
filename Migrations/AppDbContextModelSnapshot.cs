@@ -45,8 +45,15 @@ namespace SchoolManagementSystem.Migrations
 
             modelBuilder.Entity("SchoolManagementSystem.Models.Class", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<string>("code")
-                        .HasColumnType("nvarchar(450)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("hall")
                         .IsRequired()
@@ -61,28 +68,12 @@ namespace SchoolManagementSystem.Migrations
                     b.Property<int>("time")
                         .HasColumnType("int");
 
-                    b.HasKey("code");
-
-                    b.ToTable("classes");
-                });
-
-            modelBuilder.Entity("SchoolManagementSystem.Models.ClassUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("classId")
-                        .HasColumnType("int");
-
                     b.Property<int>("userId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("classUsers");
+                    b.ToTable("classes");
                 });
 
             modelBuilder.Entity("SchoolManagementSystem.Models.Professor", b =>
@@ -113,6 +104,9 @@ namespace SchoolManagementSystem.Migrations
                     b.Property<string>("title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("userId")
+                        .HasColumnType("int");
+
                     b.HasKey("id");
 
                     b.ToTable("professors");
@@ -133,28 +127,12 @@ namespace SchoolManagementSystem.Migrations
                     b.Property<int>("profId")
                         .HasColumnType("int");
 
-                    b.HasKey("id");
-
-                    b.ToTable("professorClasses");
-                });
-
-            modelBuilder.Entity("SchoolManagementSystem.Models.ProfessorUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("profId")
-                        .HasColumnType("int");
-
                     b.Property<int>("userId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
-                    b.ToTable("professorUsers");
+                    b.ToTable("professorClasses");
                 });
 
             modelBuilder.Entity("SchoolManagementSystem.Models.Student", b =>
@@ -185,6 +163,9 @@ namespace SchoolManagementSystem.Migrations
                     b.Property<string>("phone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("userId")
+                        .HasColumnType("int");
+
                     b.HasKey("id");
 
                     b.ToTable("Students");
@@ -205,28 +186,12 @@ namespace SchoolManagementSystem.Migrations
                     b.Property<int>("studentId")
                         .HasColumnType("int");
 
-                    b.HasKey("id");
-
-                    b.ToTable("StudentClasses");
-                });
-
-            modelBuilder.Entity("SchoolManagementSystem.Models.StudentUser", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
                     b.Property<int>("userId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
-                    b.ToTable("studentUsers");
+                    b.ToTable("StudentClasses");
                 });
 #pragma warning restore 612, 618
         }

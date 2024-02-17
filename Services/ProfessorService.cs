@@ -8,12 +8,15 @@ namespace SchoolManagementSystem.Services
     public class ProfessorService
     {
         private AppDbContext _db;
-        public ProfessorService(AppDbContext db)
+        private AccountManager _ac;
+        public ProfessorService(AppDbContext db,AccountManager ac)
         {
             _db = db;
+            _ac = ac;
         }
         public bool Add(Professor member)
         {
+            member.userId = _ac.admin.id;
             if (member is null) { return false; }
             _db.professors.Add(member);
             _db.SaveChanges();
@@ -21,6 +24,7 @@ namespace SchoolManagementSystem.Services
         }
         public bool Add(List<Professor> Professors)
         {
+            Professors.ForEach(x => x.userId = _ac.admin.id);
             if (Professors is null) { return false; }
             _db.professors.AddRange(Professors);
             _db.SaveChanges();
@@ -37,7 +41,7 @@ namespace SchoolManagementSystem.Services
         }
         public bool Remove(string firstName, string lastName)
         {
-            var member = _db.professors.FirstOrDefault(x => x.firstName == firstName && x.lastName == lastName);
+            var member = _db.professors.FirstOrDefault(x => x.firstName == firstName && x.lastName == lastName && x.userId == _ac.admin.id);
             if (member is null) return false;
             _db.professors.Remove(member);
             var classesAssigned = _db.professorClasses.Where(c => c.profId == member.id).ToList();
@@ -48,6 +52,7 @@ namespace SchoolManagementSystem.Services
         public List<Professor> GetBy(Filter filter)
         {
             var Result = _db.professors.ToList();
+            
             if (filter.firstName is not null)
             {
                 var subResult = _db.professors.Where(x => x.firstName.Contains(filter.firstName)).ToList();
@@ -58,11 +63,13 @@ namespace SchoolManagementSystem.Services
                 var subResult = _db.professors.Where(x => x.lastName.Contains(filter.lastName)).ToList();
                 Result = Result.Intersect(subResult).ToList();
             }
+            var curAccount = _db.professors.Where(x => x.userId == _ac.admin.id).ToList();
+            Result = Result.Intersect(curAccount).ToList();
             return Result;
         }
         public List<Professor> GetAll()
         {
-            var Professors = _db.professors.ToList();
+            var Professors = _db.professors.Where(x=> x.userId == _ac.admin.id).ToList();
             return Professors;
         }
         public void RemoveAll()
@@ -73,7 +80,7 @@ namespace SchoolManagementSystem.Services
         public bool AssignToClass(Professor member, string classCode)
         {
             bool memberResult = _db.professors.Contains(member);
-            bool codeResult = _db.classes.FirstOrDefault(x => x.code == classCode) is not null;
+            bool codeResult = _db.classes.FirstOrDefault(x => x.code == classCode && x.userId == _ac.admin.id) is not null;
 
             if (!memberResult || !codeResult)
                 return false;
@@ -81,17 +88,19 @@ namespace SchoolManagementSystem.Services
             var assignment = new ProfessorClass()
             {
                 profId = member.id,
-                classCode = classCode
+                classCode = classCode,
+                userId = _ac.admin.id
             };
             _db.professorClasses.Add(assignment);
+            _db.SaveChanges();
             return true;
         }
         public List<Professor> AllClassProfessors(string classCode)
         {
-            var _class = _db.classes.FirstOrDefault(x => x.code == classCode);
+            var _class = _db.classes.FirstOrDefault(x => x.code == classCode && x.userId == _ac.admin.id);
             if (_class is null)
                 return new List<Professor>();
-            var Ids = _db.professorClasses.Where(x => x.classCode == classCode).ToList();
+            var Ids = _db.professorClasses.Where(x => x.classCode == classCode && x.userId == _ac.admin.id).ToList();
             var professors = new List<Professor>();
             foreach (var id in Ids)
             {

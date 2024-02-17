@@ -12,13 +12,16 @@ namespace SchoolManagementSystem.Services
     public class ClassService
     {
         private AppDbContext _db;
-        public ClassService(AppDbContext db)
+        private AccountManager _ac;
+        public ClassService(AppDbContext db, AccountManager ac)
         {
             _db = db;
+            _ac = ac;
         }
         public bool Add(Class _class)
         {
-            bool exist = _db.classes.FirstOrDefault(x => x.code == _class.code) is not null;
+            _class.userId = _ac.admin.id;
+            bool exist = _db.classes.FirstOrDefault(x => x.code == _class.code && x.userId == _ac.admin.id) is not null;
             if (_class is null || exist) return false;
             _db.classes.Add(_class);
             _db.SaveChanges();
@@ -28,8 +31,8 @@ namespace SchoolManagementSystem.Services
         {
             if (_class is null) return false;
             _db.classes.Remove(_class);
-            var assignedStudents = _db.StudentClasses.Where(x => x.classCode == _class.code).ToList();
-            var assignedProfessors = _db.professorClasses.Where(x => x.classCode == _class.code).ToList();
+            var assignedStudents = _db.StudentClasses.Where(x => x.classCode == _class.code && x.userId == _ac.admin.id).ToList();
+            var assignedProfessors = _db.professorClasses.Where(x => x.classCode == _class.code && x.userId == _ac.admin.id).ToList();
             _db.StudentClasses.RemoveRange(assignedStudents);
             _db.professorClasses.RemoveRange(assignedProfessors);
             _db.SaveChanges();
@@ -37,7 +40,7 @@ namespace SchoolManagementSystem.Services
         }
         public List<Class> GetAll()
         {
-            return _db.classes.ToList();
+            return _db.classes.Where(x=> x.userId == _ac.admin.id).ToList();
         }
         public void RemoveAll()
         {

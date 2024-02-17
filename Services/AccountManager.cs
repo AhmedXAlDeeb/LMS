@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,10 @@ namespace SchoolManagementSystem.Services
         {
             admin = null;
             isSignedIn = false;
+        }
+        public void RemoveAll()
+        {
+            _db.Database.ExecuteSqlRaw("TRUNCATE TABLE [admins]");
         }
     }
 }

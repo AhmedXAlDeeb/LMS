@@ -21,5 +21,7 @@ namespace SchoolManagementSystem.Models
         public string? email { get; set; }
 
         public int? grade { get; set; }
+        public int userId { get; set; }
+
     }
 }

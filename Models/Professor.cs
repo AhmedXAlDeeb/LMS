@@ -17,6 +17,7 @@ namespace SchoolManagementSystem.Models
         public string? phone { get; set; }
         public string? email { get; set; }
         public string? title { get; set; }
+        public int userId { get; set; }
 
     }
 }
