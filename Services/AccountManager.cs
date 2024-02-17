@@ -26,7 +26,7 @@ namespace SchoolManagementSystem.Services
         }
         public bool SignUp(string userName, string password)
         {
-            var exist = _db.admins.FirstOrDefault(x => x.userName == userName && x.password == password) is not null;
+            var exist = _db.admins.FirstOrDefault(x => x.userName == userName) is not null;
             if (exist) return false;
             var newAdmin = new Admin()
             {
