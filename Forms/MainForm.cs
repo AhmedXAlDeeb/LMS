@@ -40,13 +40,14 @@ namespace WinFormsApp1
             _ac = accountManager;
             _cl = cl;
             _pf = pf;
-            //AddDummyData();
             //RemoveDummyData();
+            //AddDummyData();
             var user = new Admin()
             {
-                userName = "test",
+                userName = "Master",
                 password = "123"
             };
+            //_ac.SignUp(user.userName,user.password);
             _ac.SignIn(user.userName, user.password);
             InitializeComponent();
             InitializeControls(); // Adding other panels to the main form

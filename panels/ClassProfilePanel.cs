@@ -89,7 +89,7 @@ namespace SchoolManagementSystem.panels
             Filter filter = new Filter();
             filter.SetName(fullName);
             filter.classCode = selectedClass.code;
-            List<Student> searchResut = _st.GetBy(filter);
+            List<Student> searchResut = _st.GetBy(filter).Intersect(_st.AllClassStudents(selectedClass.code)).ToList();
 
             for (int i = 0; i < searchResut.Count; i++)
             {
