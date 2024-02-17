@@ -1,4 +1,4 @@
-﻿namespace SchoolManagementSystem.UserControls
+﻿namespace SchoolManagementSystem.panels
 {
     partial class ClassProfilePanel
     {

@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.UserControls;
+﻿using SchoolManagementSystem.Models;
+using SchoolManagementSystem.panels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,9 @@ namespace SchoolManagementSystem.Services
         public readonly int professorsPanel = 1;
         public readonly int studentsPanel = 2;
         public readonly int controlPanel = 3;
+        public readonly int classProfilePanel = 4;
+        public readonly int professorProfilePanel = 5;
+        public readonly int studentProfilePanel = 6;
         public ControlsService()
         {
         }
@@ -39,6 +43,29 @@ namespace SchoolManagementSystem.Services
                 controls[index].BringToFront();
             }
         }
-
+        public void Display(int index,Student student)
+        {
+            StudentProfilePanel.selectedStudent = student;
+            if (index < controls.Count())
+            {
+                controls[index].BringToFront();
+            }
+        }
+        public void Display(int index,Professor professor)
+        {
+            ProfessorProfilePanel.selectedProfessor = professor;
+            if (index < controls.Count())
+            {
+                controls[index].BringToFront();
+            }
+        }
+        public void Display(int index ,Class _class)
+        {
+            ClassProfilePanel.selectedClass = _class;
+            if (index < controls.Count())
+            {
+                controls[index].BringToFront();
+            }
+        }
     }
 }

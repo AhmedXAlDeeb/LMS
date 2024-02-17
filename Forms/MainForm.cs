@@ -1,6 +1,6 @@
 ﻿using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Services;
-using SchoolManagementSystem.UserControls;
+using SchoolManagementSystem.panels;
 
 
 namespace WinFormsApp1
@@ -17,13 +17,17 @@ namespace WinFormsApp1
         {
             controls = new List<UserControl>
             {
-                new ClassProfilePanel(_nav,_cl , _st ,_pf),
+                new ClassesPanel(_nav,_cl , _st ,_pf),
                 new ProfessorsPanel(_nav,_pf),
                 new StudentsPanel(_nav,_st),
-                new ControlPanel(_nav,_st,_ac)
+                new ControlPanel(_nav,_st,_ac),
+                new ClassProfilePanel(_nav,_cl , _st ,_pf),
+                new ProfessorProfilePanel(_nav,_cl , _st ,_pf),
+                new StudentProfilePanel(_nav,_cl , _st ,_pf)
             };
             _nav.Initialize(controls, MainPanel);
-            _nav.Display(_nav.classesPanel);
+            var dumyClass = _cl.GetAll()[0];
+            _nav.Display(_nav.classProfilePanel,dumyClass);
         }
         public MainForm(
          StudentService st

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp1;
 
-namespace SchoolManagementSystem.UserControls
+namespace SchoolManagementSystem.panels
 {
     public partial class ClassProfilePanel : UserControl
     {
@@ -19,6 +19,15 @@ namespace SchoolManagementSystem.UserControls
         private ClassService _cl;
         private StudentService _st;
         private ProfessorService _pf;
+        public static Class? selectedClass;
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (this.Visible)
+            {
+                InitalaizeTable();
+            }
+        }
         public ClassProfilePanel(ControlsService nav, ClassService cl, StudentService st, ProfessorService pf)
         {
             InitializeComponent();
@@ -27,14 +36,12 @@ namespace SchoolManagementSystem.UserControls
             _st = st;
             _pf = pf;
             List<Student> ClassStudents = new List<Student>();
-            InitalaizeTable();
         }
-        //sample data
-
-        private void InitalaizeTable()
+        //sample data   
+        public void InitalaizeTable()
         {
-            var classes = _cl.GetAll();
-            var students = _st.AllClassStudents(classes[0].code);
+            if (selectedClass is null) return;
+            var students = _st.AllClassStudents(selectedClass.code);
             for (int i = 0; i < students.Count; i++)
             {
                 StudentsTable.Rows.Add(new object[]
@@ -76,13 +83,12 @@ namespace SchoolManagementSystem.UserControls
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            if (selectedClass is null) return;
             StudentsTable.Rows.Clear();
-            var classes = _cl.GetAll();
-            var students = _st.AllClassStudents(classes[0].code);
             string fullName = textBox1.Text;
             Filter filter = new Filter();
             filter.SetName(fullName);
-            filter.classCode = classes[0].code;
+            filter.classCode = selectedClass.code;
             List<Student> searchResut = _st.GetBy(filter);
 
             for (int i = 0; i < searchResut.Count; i++)

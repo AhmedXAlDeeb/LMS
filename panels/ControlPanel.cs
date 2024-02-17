@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp1;
 
-namespace SchoolManagementSystem.UserControls
+namespace SchoolManagementSystem.panels
 {
     public partial class ControlPanel : UserControl
     {

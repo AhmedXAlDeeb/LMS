@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SchoolManagementSystem.UserControls
+namespace SchoolManagementSystem.panels
 {
     public partial class ProfessorsPanel : UserControl
     {
