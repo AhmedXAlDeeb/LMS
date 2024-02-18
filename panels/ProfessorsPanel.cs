@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Services;
+﻿using SchoolManagementSystem.Models;
+using SchoolManagementSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,22 @@ namespace SchoolManagementSystem.panels
             InitializeComponent();
             _nav = nav;
             _pf = pf;
+            List<Professor> professors = new List<Professor>();
+            initializeTable();
         }
 
+        public void initializeTable()
+        {
+            var professors = _pf.GetAll();
+            //var students = _st.AllClassStudents(selectedClass.code);
+            for (int i = 0; i < professors.Count; i++)
+            {
+                StudentsTable.Rows.Add(new object[]
+                {
+                    $"{professors[i].firstName} {professors[i].lastName}" ,$"{professors[i].id}" , $"{professors[i].email}"
+                });
+            }
+        }
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             StudentsTable.FirstDisplayedScrollingRowIndex = StudentsTable.Rows[e.OldValue].Index;
