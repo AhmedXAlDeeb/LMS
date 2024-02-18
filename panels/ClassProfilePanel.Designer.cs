@@ -243,7 +243,7 @@
             Controls.Add(NameLabel);
             Controls.Add(button1);
             DoubleBuffered = true;
-            Name = "ClassProfilePanel";
+            this.Name.Name = "ClassProfilePanel";
             Size = new Size(800, 600);
             ((System.ComponentModel.ISupportInitialize)StudentsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

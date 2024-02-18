@@ -27,5 +27,9 @@ namespace SchoolManagementSystem.panels
             _pf = pf;
         }
 
+        private void ClassesPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,6 @@ namespace SchoolManagementSystem.panels
             _cl = cl;
             _st = st;
             _pf = pf;
-            loadPage();
         }
 
         protected override void OnVisibleChanged(EventArgs e)
@@ -48,18 +47,7 @@ namespace SchoolManagementSystem.panels
             }
         }
 
-        public void loadPage()
-        {
-            if (selectedStudent != null)
-            {
-                label1.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
-                label2.Text = $"{selectedStudent.age}";
-                label3.Text = $"{selectedStudent.email}";
-                label4.Text = $"{selectedStudent.phone}";
-                label5.Text = $"{selectedStudent.grade}";
-                label6.Text = $"{selectedStudent.id}";
-            }
-        }
+        
 
         private void StudentProfilePanel_Load(object sender, EventArgs e)
         {
@@ -77,7 +65,15 @@ namespace SchoolManagementSystem.panels
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            if (selectedStudent != null)
+            {
+                label1.Text = $" Mostafa {selectedStudent.lastName}";
+                label2.Text = $"{selectedStudent.age}";
+                label3.Text = $"{selectedStudent.email}";
+                label4.Text = $"{selectedStudent.phone}";
+                label5.Text = $"{selectedStudent.grade}";
+                label6.Text = $"{selectedStudent.id}";
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
