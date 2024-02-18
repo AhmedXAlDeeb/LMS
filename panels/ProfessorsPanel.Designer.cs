@@ -154,7 +154,7 @@
             Controls.Add(textBox1);
             Controls.Add(StudentsTable);
             Controls.Add(vScrollBar1);
-            Name = "ProfessorsPanel";
+            this.Name.Name = "ProfessorsPanel";
             Size = new Size(859, 518);
             Load += ProfessorsPanel_Load;
             ((System.ComponentModel.ISupportInitialize)StudentsTable).EndInit();
