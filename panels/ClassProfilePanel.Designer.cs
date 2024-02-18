@@ -59,7 +59,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(736, 37);
+            button1.Location = new Point(531, 24);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 0;
@@ -70,7 +70,7 @@
             // NameLabel
             // 
             NameLabel.AutoSize = true;
-            NameLabel.Location = new Point(970, 181);
+            NameLabel.Location = new Point(608, 148);
             NameLabel.Name = "NameLabel";
             NameLabel.Size = new Size(89, 20);
             NameLabel.TabIndex = 2;
@@ -95,7 +95,7 @@
             StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             StudentsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             StudentsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            StudentsTable.BackgroundColor = SystemColors.ControlLight;
+            StudentsTable.BackgroundColor = Color.FromArgb(233, 245, 247);
             StudentsTable.BorderStyle = BorderStyle.None;
             StudentsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             StudentsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -137,7 +137,7 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            StudentsTable.Size = new Size(710, 408);
+            StudentsTable.Size = new Size(723, 288);
             StudentsTable.TabIndex = 4;
             StudentsTable.CellContentClick += dataGridView1_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
@@ -190,7 +190,7 @@
             // codeLabel
             // 
             codeLabel.AutoSize = true;
-            codeLabel.Location = new Point(970, 111);
+            codeLabel.Location = new Point(608, 78);
             codeLabel.Name = "codeLabel";
             codeLabel.Size = new Size(84, 20);
             codeLabel.TabIndex = 7;
@@ -199,7 +199,7 @@
             // hallLabel
             // 
             hallLabel.AutoSize = true;
-            hallLabel.Location = new Point(831, 181);
+            hallLabel.Location = new Point(469, 148);
             hallLabel.Name = "hallLabel";
             hallLabel.Size = new Size(76, 20);
             hallLabel.TabIndex = 8;
@@ -208,7 +208,7 @@
             // TimeLabel
             // 
             TimeLabel.AutoSize = true;
-            TimeLabel.Location = new Point(825, 111);
+            TimeLabel.Location = new Point(463, 78);
             TimeLabel.Name = "TimeLabel";
             TimeLabel.Size = new Size(82, 20);
             TimeLabel.TabIndex = 9;
@@ -218,9 +218,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.login__2_;
-            pictureBox1.Location = new Point(3, 53);
+            pictureBox1.Location = new Point(0, 53);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(384, 232);
+            pictureBox1.Size = new Size(311, 232);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -244,7 +244,7 @@
             Controls.Add(button1);
             DoubleBuffered = true;
             this.Name.Name = "ClassProfilePanel";
-            Size = new Size(1200, 720);
+            Size = new Size(800, 600);
             ((System.ComponentModel.ISupportInitialize)StudentsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

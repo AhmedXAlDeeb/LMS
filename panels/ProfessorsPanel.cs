@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -63,6 +64,14 @@ namespace SchoolManagementSystem.panels
             string fullName = textBox1.Text;
             Filter filter = new Filter();
             filter.SetName(fullName);
+            List<Professor> searchResult = _pf.GetBy(filter);
+            for (int i = 0; i < searchResult.Count; i++)
+            {
+                ProfesorsTable.Rows.Add(new object[]
+                {
+                    $"{searchResult[i].firstName} {searchResult[i].lastName}" ,$"{searchResult[i].id}",$"{searchResult[i].email}"
+                });
+            }
         }
 
         private void ProfessorsPanel_Load(object sender, EventArgs e)
