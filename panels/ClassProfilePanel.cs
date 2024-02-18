@@ -20,6 +20,7 @@ namespace SchoolManagementSystem.panels
         private StudentService _st;
         private ProfessorService _pf;
         public static Class? selectedClass;
+        List<Student> searchResut = new List<Student>();
         protected override void OnVisibleChanged(EventArgs e)
         {
             base.OnVisibleChanged(e);
@@ -46,6 +47,7 @@ namespace SchoolManagementSystem.panels
             NameLabel.Text = selectedClass.name;
             if (selectedClass is null) return;
             var students = _st.AllClassStudents(selectedClass.code);
+            this.searchResut = students;
             for (int i = 0; i < students.Count; i++)
             {
                 StudentsTable.Rows.Add(new object[]
@@ -62,7 +64,7 @@ namespace SchoolManagementSystem.panels
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            _nav.Display(_nav.studentProfilePanel,this.searchResut[e.RowIndex]);
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -88,18 +90,19 @@ namespace SchoolManagementSystem.panels
         private void SearchButton_Click(object sender, EventArgs e)
         {
             if (selectedClass is null) return;
+            this.searchResut.Clear();
             StudentsTable.Rows.Clear();
             string fullName = textBox1.Text;
             Filter filter = new Filter();
             filter.SetName(fullName);
             filter.classCode = selectedClass.code;
-            List<Student> searchResut = _st.GetBy(filter).Intersect(_st.AllClassStudents(selectedClass.code)).ToList();
+            this.searchResut = _st.GetBy(filter).Intersect(_st.AllClassStudents(selectedClass.code)).ToList();
 
             for (int i = 0; i < searchResut.Count; i++)
             {
                 StudentsTable.Rows.Add(new object[]
                 {
-                    $"{searchResut[i].firstName} {searchResut[i].lastName}" ,$"{searchResut[i].id}",$"{searchResut[i].grade}"
+                    $"{this.searchResut[i].firstName} {this.searchResut[i].lastName}" ,$"{this.searchResut[i].id}",$"{this.searchResut[i].grade}"
                 });
             }
 

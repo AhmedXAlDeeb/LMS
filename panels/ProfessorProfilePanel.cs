@@ -30,7 +30,7 @@ namespace SchoolManagementSystem.panels
 
         private void ProfessorProfilePanel_Load(object sender, EventArgs e)
         {
-            if (selectedProfessor!= null)
+            if (selectedProfessor != null)
             {
                 label1.Text = $" {selectedProfessor.firstName} {selectedProfessor.lastName}";
                 label2.Text = $"{selectedProfessor.title}";
@@ -40,5 +40,12 @@ namespace SchoolManagementSystem.panels
                 label6.Text = $"{selectedProfessor.phone}";
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
