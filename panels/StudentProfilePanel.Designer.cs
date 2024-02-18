@@ -61,13 +61,8 @@
             // label1
             // 
             label1.AutoSize = true;
-<<<<<<< HEAD
-            label1.BackColor = SystemColors.ButtonHighlight;
-            label1.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-=======
             label1.BackColor = Color.FromArgb(43, 180, 200);
             label1.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
->>>>>>> c454c7784528e0951cabd84651f75333e56112ea
             label1.ForeColor = Color.White;
             label1.Location = new Point(165, 41);
             label1.Name = "label1";
@@ -224,7 +219,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Name = "StudentProfilePanel";
+            this.Name.Name = "StudentProfilePanel";
             Size = new Size(800, 600);
             Load += StudentProfilePanel_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
