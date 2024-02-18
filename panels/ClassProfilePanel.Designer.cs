@@ -119,7 +119,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             StudentsTable.DefaultCellStyle = dataGridViewCellStyle5;
             StudentsTable.EnableHeadersVisualStyles = false;
-            StudentsTable.Location = new Point(28, 291);
+            StudentsTable.Location = new Point(15, 291);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -243,7 +243,7 @@
             Controls.Add(NameLabel);
             Controls.Add(button1);
             DoubleBuffered = true;
-            this.Name.Name = "ClassProfilePanel";
+            Name = "ClassProfilePanel";
             Size = new Size(800, 600);
             ((System.ComponentModel.ISupportInitialize)StudentsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

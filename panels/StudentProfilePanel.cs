@@ -19,6 +19,8 @@ namespace SchoolManagementSystem.panels
         private StudentService _st;
         private ProfessorService _pf;
         public static Student? selectedStudent;
+
+        
         public StudentProfilePanel(ControlsService nav, ClassService cl, StudentService st, ProfessorService pf)
         {
             InitializeComponent();
@@ -26,6 +28,37 @@ namespace SchoolManagementSystem.panels
             _cl = cl;
             _st = st;
             _pf = pf;
+            loadPage();
+        }
+
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (this.Visible)
+            {
+                if (selectedStudent != null)
+                {
+                    label1.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
+                    label2.Text = $"{selectedStudent.age}";
+                    label3.Text = $"{selectedStudent.email}";
+                    label4.Text = $"{selectedStudent.phone}";
+                    label5.Text = $"{selectedStudent.grade}";
+                    label6.Text = $"{selectedStudent.id}";
+                }
+            }
+        }
+
+        public void loadPage()
+        {
+            if (selectedStudent != null)
+            {
+                label1.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
+                label2.Text = $"{selectedStudent.age}";
+                label3.Text = $"{selectedStudent.email}";
+                label4.Text = $"{selectedStudent.phone}";
+                label5.Text = $"{selectedStudent.grade}";
+                label6.Text = $"{selectedStudent.id}";
+            }
         }
 
         private void StudentProfilePanel_Load(object sender, EventArgs e)

@@ -17,6 +17,7 @@ namespace SchoolManagementSystem.panels
     {
         private ControlsService _nav;
         private ProfessorService _pf;
+        List<Professor> searchResult = new List<Professor>();
         public ProfessorsPanel(ControlsService nav, ProfessorService pf)
         {
             InitializeComponent();
@@ -29,12 +30,13 @@ namespace SchoolManagementSystem.panels
         public void initializeTable()
         {
             var professors = _pf.GetAll();
+            this.searchResult = professors;
             //var students = _st.AllClassStudents(selectedClass.code);
             for (int i = 0; i < professors.Count; i++)
             {
                 ProfesorsTable.Rows.Add(new object[]
                 {
-                    $"{professors[i].firstName} {professors[i].lastName}" ,$"{professors[i].id}" , $"{professors[i].email}"
+                    $"{this.searchResult[i].firstName} {this.searchResult[i].lastName}" ,$"{this.searchResult[i].id}" , $"{this.searchResult[i].email}"
                 });
             }
         }
@@ -45,7 +47,7 @@ namespace SchoolManagementSystem.panels
 
         private void StudentsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            _nav.Display(_nav.professorProfilePanel, this.searchResult[e.RowIndex]);
         }
 
         private void StudentsTable_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -64,7 +66,7 @@ namespace SchoolManagementSystem.panels
             string fullName = textBox1.Text;
             Filter filter = new Filter();
             filter.SetName(fullName);
-            List<Professor> searchResult = _pf.GetBy(filter);
+            this.searchResult = _pf.GetBy(filter);
             for (int i = 0; i < searchResult.Count; i++)
             {
                 ProfesorsTable.Rows.Add(new object[]

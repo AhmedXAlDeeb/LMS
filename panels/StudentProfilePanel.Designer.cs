@@ -52,7 +52,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.ButtonHighlight;
+            label1.BackColor = Color.FromArgb(43, 180, 200);
             label1.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(205, 117);
