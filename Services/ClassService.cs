@@ -2,6 +2,7 @@
 using SchoolManagementSystem.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +14,12 @@ namespace SchoolManagementSystem.Services
     {
         private AppDbContext _db;
         private AccountManager _ac;
-        public ClassService(AppDbContext db, AccountManager ac)
+        private StudentService _st;
+        public ClassService(AppDbContext db, AccountManager ac,StudentService st)
         {
             _db = db;
             _ac = ac;
+            _st = st;
         }
         public bool Add(Class _class)
         {
@@ -79,6 +82,29 @@ namespace SchoolManagementSystem.Services
                 classes.Add(_db.classes.First(x => x.code == code));
             }
             return classes;
+        }
+        public void ExportToCSV(string classCode)
+        {
+            var students = _st.AllClassStudents(classCode);
+            var sheet = new List<string>
+            {
+                $"Id,{"Name",-30},Age,Phone,Email,Grade"
+            };
+            foreach (var student in students)
+            {
+                StringBuilder row = new StringBuilder();
+                row.AppendLine($"{student.id},{student.firstName + " " + student.lastName}" +
+                    $",{student.age},{student.phone},{student.email},{student.grade}");
+                sheet.Add(row.ToString());
+            }
+            string file = $@"C:\Users\{Environment.UserName}\Downloads\{classCode}.csv";
+            File.WriteAllLines(file, sheet);
+            var p = new Process();
+            p.StartInfo = new ProcessStartInfo(file)
+            {
+                UseShellExecute = true
+            };
+            p.Start();
         }
     }
 }
