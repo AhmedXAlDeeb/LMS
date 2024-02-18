@@ -80,5 +80,26 @@ namespace SchoolManagementSystem.panels
         {
 
         }
+
+        private void StudentsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void StudentsTable_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            vScrollBar1.Maximum = StudentsTable.RowCount;
+        }
+
+        private void StudentsTable_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            vScrollBar1.Maximum = StudentsTable.RowCount;
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            StudentsTable.FirstDisplayedScrollingRowIndex = StudentsTable.Rows[e.OldValue].Index;
+        }
+
     }
 }
