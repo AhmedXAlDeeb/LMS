@@ -28,10 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(240, 219);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Name";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(491, 274);
+            label2.Name = "label2";
+            label2.Size = new Size(22, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Id";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(356, 191);
+            label3.Name = "label3";
+            label3.Size = new Size(49, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Name";
+            // 
+            // StudentProfilePanel
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "StudentProfilePanel";
+            Size = new Size(1030, 569);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

@@ -40,6 +40,10 @@ namespace SchoolManagementSystem.panels
         //sample data   
         public void InitalaizeTable()
         {
+            hallLabel.Text = selectedClass.hall;
+            TimeLabel.Text = $"{selectedClass.time}";
+            codeLabel.Text = selectedClass.code;
+            NameLabel.Text = selectedClass.name;
             if (selectedClass is null) return;
             var students = _st.AllClassStudents(selectedClass.code);
             for (int i = 0; i < students.Count; i++)
@@ -53,7 +57,7 @@ namespace SchoolManagementSystem.panels
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _nav.Display(_nav.classesPanel);
+            _nav.Display(_nav.professorsPanel);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,6 +102,31 @@ namespace SchoolManagementSystem.panels
                     $"{searchResut[i].firstName} {searchResut[i].lastName}" ,$"{searchResut[i].id}",$"{searchResut[i].grade}"
                 });
             }
+
+        }
+
+        private void NameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

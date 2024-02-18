@@ -26,7 +26,9 @@ namespace WinFormsApp1
                 new StudentProfilePanel(_nav,_cl , _st ,_pf)
             };
             _nav.Initialize(controls, MainPanel);
-            _nav.Display(_nav.classProfilePanel, _cl.GetAll()[0]);
+            var classes = _cl.GetAll();
+
+            _nav.Display(_nav.classProfilePanel, classes[1]);
         }
         public MainForm(
          StudentService st
