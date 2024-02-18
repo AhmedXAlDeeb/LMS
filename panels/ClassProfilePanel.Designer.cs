@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        private void InitializeComponent()
-        {
-            InitializeComponent(Name);
-        }
+        //private void InitializeComponent()
+        //{
+        //  InitializeComponent(Name);
+        //}
 
         #region Component Designer generated code
 
@@ -31,14 +31,15 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(DataGridViewTextBoxColumn name)
+        /// DataGridViewTextBoxColumn name
+        private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             button1 = new Button();
             NameLabel = new Label();
             textBox1 = new TextBox();
@@ -90,45 +91,45 @@
             StudentsTable.AllowUserToAddRows = false;
             StudentsTable.AllowUserToDeleteRows = false;
             StudentsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = Color.FromArgb(233, 245, 247);
-            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(233, 245, 247);
+            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             StudentsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             StudentsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             StudentsTable.BackgroundColor = SystemColors.ControlLight;
             StudentsTable.BorderStyle = BorderStyle.None;
             StudentsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             StudentsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle14.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle2.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             StudentsTable.ColumnHeadersHeight = 35;
             StudentsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             StudentsTable.Columns.AddRange(new DataGridViewColumn[] { Name, ID, Grade });
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = SystemColors.Window;
-            dataGridViewCellStyle17.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle17.ForeColor = Color.Silver;
-            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(252, 252, 252);
-            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.False;
-            StudentsTable.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.Silver;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(252, 252, 252);
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            StudentsTable.DefaultCellStyle = dataGridViewCellStyle5;
             StudentsTable.EnableHeadersVisualStyles = false;
             StudentsTable.Location = new Point(28, 291);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = SystemColors.Control;
-            dataGridViewCellStyle18.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle18.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
-            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             StudentsTable.RowHeadersVisible = false;
             StudentsTable.RowHeadersWidth = 51;
             StudentsTable.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Silver;
@@ -136,7 +137,7 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            StudentsTable.Size = new Size(1137, 408);
+            StudentsTable.Size = new Size(710, 408);
             StudentsTable.TabIndex = 4;
             StudentsTable.CellContentClick += dataGridView1_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
@@ -144,9 +145,9 @@
             // 
             // Name
             // 
-            dataGridViewCellStyle15.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle15.SelectionForeColor = Color.Transparent;
-            Name.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Transparent;
+            Name.DefaultCellStyle = dataGridViewCellStyle3;
             Name.HeaderText = "Stu. Name";
             Name.MinimumWidth = 6;
             Name.Name = "Name";
@@ -154,8 +155,8 @@
             // 
             // ID
             // 
-            dataGridViewCellStyle16.BackColor = Color.White;
-            ID.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            ID.DefaultCellStyle = dataGridViewCellStyle4;
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
@@ -242,7 +243,7 @@
             Controls.Add(NameLabel);
             Controls.Add(button1);
             DoubleBuffered = true;
-            //name = "ClassProfilePanel";
+            Name = "ClassProfilePanel";
             Size = new Size(1200, 720);
             ((System.ComponentModel.ISupportInitialize)StudentsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

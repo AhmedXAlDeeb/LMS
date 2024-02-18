@@ -31,7 +31,7 @@ namespace SchoolManagementSystem.panels
             //var students = _st.AllClassStudents(selectedClass.code);
             for (int i = 0; i < professors.Count; i++)
             {
-                StudentsTable.Rows.Add(new object[]
+                ProfesorsTable.Rows.Add(new object[]
                 {
                     $"{professors[i].firstName} {professors[i].lastName}" ,$"{professors[i].id}" , $"{professors[i].email}"
                 });
@@ -39,7 +39,7 @@ namespace SchoolManagementSystem.panels
         }
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            StudentsTable.FirstDisplayedScrollingRowIndex = StudentsTable.Rows[e.OldValue].Index;
+            ProfesorsTable.FirstDisplayedScrollingRowIndex = ProfesorsTable.Rows[e.OldValue].Index;
         }
 
         private void StudentsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -49,17 +49,20 @@ namespace SchoolManagementSystem.panels
 
         private void StudentsTable_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            vScrollBar1.Maximum = StudentsTable.RowCount;
+            vScrollBar1.Maximum = ProfesorsTable.RowCount;
         }
 
         private void StudentsTable_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-            vScrollBar1.Maximum = StudentsTable.RowCount;
+            vScrollBar1.Maximum = ProfesorsTable.RowCount;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ProfesorsTable.Rows.Clear();
+            string fullName = textBox1.Text;
+            Filter filter = new Filter();
+            filter.SetName(fullName);
         }
 
         private void ProfessorsPanel_Load(object sender, EventArgs e)
