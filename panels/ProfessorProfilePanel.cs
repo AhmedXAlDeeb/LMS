@@ -27,5 +27,18 @@ namespace SchoolManagementSystem.panels
             _st = st;
             _pf = pf;
         }
+
+        private void ProfessorProfilePanel_Load(object sender, EventArgs e)
+        {
+            if (selectedProfessor!= null)
+            {
+                label1.Text = $" {selectedProfessor.firstName} {selectedProfessor.lastName}";
+                label2.Text = $"{selectedProfessor.title}";
+                label3.Text = $"{selectedProfessor.id}";
+                label4.Text = $"{selectedProfessor.age}";
+                label5.Text = $"{selectedProfessor.email}";
+                label6.Text = $"{selectedProfessor.phone}";
+            }
+        }
     }
 }

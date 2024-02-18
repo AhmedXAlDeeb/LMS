@@ -27,5 +27,29 @@ namespace SchoolManagementSystem.panels
             _st = st;
             _pf = pf;
         }
+
+        private void StudentProfilePanel_Load(object sender, EventArgs e)
+        {
+            if (selectedStudent != null)
+            {
+                label1.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
+                label2.Text = $"{selectedStudent.age}";
+                label3.Text = $"{selectedStudent.email}";
+                label4.Text = $"{selectedStudent.phone}";
+                label5.Text = $"{selectedStudent.grade}";
+                label6.Text = $"{selectedStudent.id}";
+            }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
