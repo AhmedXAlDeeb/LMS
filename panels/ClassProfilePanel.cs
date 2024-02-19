@@ -26,6 +26,7 @@ namespace SchoolManagementSystem.panels
             base.OnVisibleChanged(e);
             if (this.Visible)
             {
+                if(selectedClass is null)return;
                 InitalaizeTable();
             }
         }
@@ -41,6 +42,7 @@ namespace SchoolManagementSystem.panels
         //sample data   
         public void InitalaizeTable()
         {
+            StudentsTable.Rows.Clear();
             hallLabel.Text = selectedClass.hall;
             TimeLabel.Text = $"{selectedClass.time}";
             codeLabel.Text = selectedClass.code;

@@ -64,6 +64,8 @@ namespace SchoolManagementSystem.Services
             ClassProfilePanel.selectedClass = _class;
             if (index < controls.Count())
             {
+                var panel = (ClassProfilePanel)controls[index];
+                panel.InitalaizeTable();
                 controls[index].BringToFront();
             }
         }

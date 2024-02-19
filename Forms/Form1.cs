@@ -1,3 +1,5 @@
+using DSproject;
+using Microsoft.Extensions.DependencyInjection;
 using SchoolManagementSystem.Models;
 using SchoolManagementSystem.panels;
 using SchoolManagementSystem.Services;
@@ -16,18 +18,16 @@ namespace Learning_Managment_System
         {
             controls = new List<UserControl>
             {
-                new ClassesPanel(_nav,_cl , _st ,_pf),
-                new ProfessorsPanel(_nav,_pf),
-                new StudentsPanel(_nav,_st),
-                new ControlPanel(_nav,_st,_ac),
-                new ClassProfilePanel(_nav,_cl , _st ,_pf),
-                new ProfessorProfilePanel(_nav,_cl , _st ,_pf),
-                new StudentProfilePanel(_nav,_cl , _st ,_pf)
+                new ClassesPanel(_nav, _cl, _st, _pf),
+                new ProfessorsPanel(_nav, _pf),
+                new StudentsPanel(_nav, _st),
+                new ControlPanel(_nav, _st, _ac),
+                new ClassProfilePanel(_nav, _cl, _st, _pf),
+                new ProfessorProfilePanel(_nav, _cl, _st, _pf),
+                new StudentProfilePanel(_nav, _cl, _st, _pf)
             };
             _nav.Initialize(controls, currentPanel);
-            var classes = _cl.GetAll();
-
-            _nav.Display(_nav.classProfilePanel, classes[1]);
+            _nav.Display(_nav.controlPanel);
         }
         public Form1(
          StudentService st
@@ -43,13 +43,6 @@ namespace Learning_Managment_System
             _pf = pf;
             //RemoveDummyData();
             //AddDummyData();
-            var user = new Admin()
-            {
-                userName = "Master",
-                password = "123"
-            };
-            //_ac.SignUp(user.userName,user.password);
-            _ac.SignIn(user.userName, user.password);
             InitializeComponent();
             InitializeControls(); // Adding other panels to the main form
         }
