@@ -258,7 +258,7 @@
             Controls.Add(stuAge);
             Controls.Add(stuName);
             Controls.Add(pictureBox1);
-            Name = "StudentProfilePanel";
+            Name.Name = "StudentProfilePanel";
             Size = new Size(800, 600);
             Load += StudentProfilePanel_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

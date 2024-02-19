@@ -20,6 +20,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\NewClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\newProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\newStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\SignIn.cs">
       <SubType>Form</SubType>
     </Compile>

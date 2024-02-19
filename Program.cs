@@ -22,7 +22,7 @@ namespace WinFormsApp1
 
             // Services 
             services.AddSingleton<AppDbContext>();
-            services.AddTransient<MainForm>();
+            services.AddTransient<SideBar>();
             services.AddTransient<StudentService>();
             services.AddTransient<ProfessorService>();
             services.AddSingleton<ControlsService>();
@@ -30,7 +30,7 @@ namespace WinFormsApp1
             services.AddTransient<ClassService>();
 
             using ServiceProvider serviceProvider = services.BuildServiceProvider();
-            var mainForm = serviceProvider.GetRequiredService<MainForm>();
+            var mainForm = serviceProvider.GetRequiredService<SideBar>();
 
             //Application.Run(new SignIn());
             Application.Run(mainForm);

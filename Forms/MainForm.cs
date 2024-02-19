@@ -1,7 +1,7 @@
 ﻿using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Services;
 using SchoolManagementSystem.panels;
-
+using Learning_Managment_System;
 
 namespace WinFormsApp1
 {

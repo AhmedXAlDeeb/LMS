@@ -1,5 +1,4 @@
-﻿using SchoolManagementSystem.Models;
-using SchoolManagementSystem.Services;
+﻿using SchoolManagementSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,16 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinFormsApp1;
 
-namespace SchoolManagementSystem.panels
+namespace Learning_Managment_System
 {
     public partial class ControlPanel : UserControl
     {
         private StudentService _st;
         private AccountManager _accountManager;
         private ControlsService _nav;
-        public ControlPanel(ControlsService nav,StudentService st,AccountManager accountManager)
+        public ControlPanel(ControlsService nav, StudentService st, AccountManager accountManager)
         {
             InitializeComponent();
             _st = st;
@@ -26,10 +24,23 @@ namespace SchoolManagementSystem.panels
             _nav = nav;
         }
 
-        private void test_Click(object sender, EventArgs e)
+
+        private void newStudButt_Click(object sender, EventArgs e)
         {
-            _nav.Display(_nav.classesPanel);
+            newStud newStud = new newStud();
+            newStud.ShowDialog();
         }
-        
+
+        private void newClassButt_Click(object sender, EventArgs e)
+        {
+            NewClass newClass = new NewClass();
+            newClass.ShowDialog();
+        }
+
+        private void newProffButt_Click(object sender, EventArgs e)
+        {
+            newProf newProf = new newProf();
+            newProf.ShowDialog();
+        }
     }
 }
