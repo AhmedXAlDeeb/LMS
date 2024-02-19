@@ -32,12 +32,12 @@ namespace SchoolManagementSystem.panels
         {
             if (selectedProfessor != null)
             {
-                label1.Text = $" {selectedProfessor.firstName} {selectedProfessor.lastName}";
-                label2.Text = $"{selectedProfessor.title}";
-                label3.Text = $"{selectedProfessor.id}";
-                label4.Text = $"{selectedProfessor.age}";
-                label5.Text = $"{selectedProfessor.email}";
-                label6.Text = $"{selectedProfessor.phone}";
+                profName.Text = $" {selectedProfessor.firstName} {selectedProfessor.lastName}";
+                profTitle.Text = $"{selectedProfessor.title}";
+                profID.Text = $"{selectedProfessor.id}";
+                profAge.Text = $"{selectedProfessor.age}";
+                profEmail.Text = $"{selectedProfessor.email}";
+                profPhone.Text = $"{selectedProfessor.phone}";
             }
         }
 
@@ -46,5 +46,19 @@ namespace SchoolManagementSystem.panels
 
         }
 
+        private void StudentsTable_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            vScrollBar1.Maximum = StudentsTable.RowCount;
+        }
+
+        private void StudentsTable_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            vScrollBar1.Maximum = StudentsTable.RowCount;
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            StudentsTable.FirstDisplayedScrollingRowIndex = StudentsTable.Rows[e.OldValue].Index;
+        }
     }
 }

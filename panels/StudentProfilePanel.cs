@@ -37,12 +37,12 @@ namespace SchoolManagementSystem.panels
             {
                 if (selectedStudent != null)
                 {
-                    label1.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
-                    label2.Text = $"{selectedStudent.age}";
-                    label3.Text = $"{selectedStudent.email}";
-                    label4.Text = $"{selectedStudent.phone}";
-                    label5.Text = $"{selectedStudent.grade}";
-                    label6.Text = $"{selectedStudent.id}";
+                    stuName.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
+                    stuAge.Text = $"{selectedStudent.age}";
+                    stuEmail.Text = $"{selectedStudent.email}";
+                    stuPhone.Text = $"{selectedStudent.phone}";
+                    stuGrade.Text = $"{selectedStudent.grade}";
+                    stuID.Text = $"{selectedStudent.id}";
                 }
             }
         }
@@ -53,12 +53,12 @@ namespace SchoolManagementSystem.panels
         {
             if (selectedStudent != null)
             {
-                label1.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
-                label2.Text = $"{selectedStudent.age}";
-                label3.Text = $"{selectedStudent.email}";
-                label4.Text = $"{selectedStudent.phone}";
-                label5.Text = $"{selectedStudent.grade}";
-                label6.Text = $"{selectedStudent.id}";
+                stuName.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
+                stuAge.Text = $"{selectedStudent.age}";
+                stuEmail.Text = $"{selectedStudent.email}";
+                stuPhone.Text = $"{selectedStudent.phone}";
+                stuGrade.Text = $"{selectedStudent.grade}";
+                stuID.Text = $"{selectedStudent.id}";
             }
 
         }
@@ -67,12 +67,12 @@ namespace SchoolManagementSystem.panels
         {
             if (selectedStudent != null)
             {
-                label1.Text = $" Mostafa {selectedStudent.lastName}";
-                label2.Text = $"{selectedStudent.age}";
-                label3.Text = $"{selectedStudent.email}";
-                label4.Text = $"{selectedStudent.phone}";
-                label5.Text = $"{selectedStudent.grade}";
-                label6.Text = $"{selectedStudent.id}";
+                stuName.Text = $" Mostafa {selectedStudent.lastName}";
+                stuAge.Text = $"{selectedStudent.age}";
+                stuEmail.Text = $"{selectedStudent.email}";
+                stuPhone.Text = $"{selectedStudent.phone}";
+                stuGrade.Text = $"{selectedStudent.grade}";
+                stuID.Text = $"{selectedStudent.id}";
             }
         }
 
