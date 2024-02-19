@@ -137,7 +137,7 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            StudentsTable.Size = new Size(723, 288);
+            StudentsTable.Size = new Size(572, 288);
             StudentsTable.TabIndex = 4;
             StudentsTable.CellContentClick += dataGridView1_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
@@ -171,7 +171,7 @@
             // 
             // vScrollBar1
             // 
-            vScrollBar1.Location = new Point(769, 361);
+            vScrollBar1.Location = new Point(608, 337);
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(26, 224);
             vScrollBar1.TabIndex = 5;
