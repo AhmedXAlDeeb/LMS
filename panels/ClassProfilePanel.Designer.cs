@@ -119,7 +119,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             StudentsTable.DefaultCellStyle = dataGridViewCellStyle5;
             StudentsTable.EnableHeadersVisualStyles = false;
-            StudentsTable.Location = new Point(15, 291);
+            StudentsTable.Location = new Point(3, 291);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -137,7 +137,7 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            StudentsTable.Size = new Size(657, 277);
+            StudentsTable.Size = new Size(879, 318);
             StudentsTable.TabIndex = 4;
             StudentsTable.CellContentClick += dataGridView1_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
@@ -171,9 +171,9 @@
             // 
             // vScrollBar1
             // 
-            vScrollBar1.Location = new Point(675, 324);
+            vScrollBar1.Location = new Point(885, 291);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(26, 112);
+            vScrollBar1.Size = new Size(26, 318);
             vScrollBar1.TabIndex = 5;
             vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
@@ -218,7 +218,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.login__2_;
-            pictureBox1.Location = new Point(0, 53);
+            pictureBox1.Location = new Point(3, 53);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(311, 232);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
