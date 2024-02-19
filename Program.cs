@@ -23,19 +23,21 @@ namespace WinFormsApp1
 
             // Services 
             services.AddSingleton<AppDbContext>();
-            services.AddTransient<Form1>();
+            services.AddSingleton<Form1>();
             services.AddTransient<StudentService>();
             services.AddTransient<ProfessorService>();
             services.AddSingleton<ControlsService>();
             services.AddSingleton<AccountManager>();
             services.AddTransient<ClassService>();
-            services.AddTransient<SignUP>();
-            services.AddTransient<SignIn>();
 
             using ServiceProvider serviceProvider = services.BuildServiceProvider();
-            var mainForm = serviceProvider.GetRequiredService<Form1>();
+            var _ac = serviceProvider.GetRequiredService<AccountManager>();
+            var _cl = serviceProvider.GetRequiredService<ClassService>();
+            var _nav = serviceProvider.GetRequiredService<ControlsService>();
+            var _pf = serviceProvider.GetRequiredService<ProfessorService>();
+            var _st = serviceProvider.GetRequiredService<StudentService>();
 
-            Application.Run(mainForm);
+            Application.Run(new SignIn(_st, _ac, _nav, _cl, _pf));
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using SchoolManagementSystem.Services;
+﻿using Learning_Managment_System;
+using Microsoft.Extensions.DependencyInjection;
+using SchoolManagementSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,14 +16,25 @@ namespace DSproject
 
     public partial class SignIn : Form
     {
-        private AccountManager accountManager;
-        private SignUP _SignUP;
+        private ControlsService _nav;
+        private StudentService _st;
+        private ProfessorService _pf;
+        private AccountManager _ac;
+        private ClassService _cl;
 
-        public SignIn(AccountManager accountManager, SignUP signUP)
+        public SignIn(
+         StudentService st
+        , AccountManager ac
+        , ControlsService nav
+        , ClassService cl
+        , ProfessorService pf)
         {
             InitializeComponent();
-            this.accountManager = accountManager;
-            this._SignUP = signUP;
+            _ac = ac;
+            _cl = cl;
+            _nav = nav;
+            _st = st;
+            _pf = pf;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -58,7 +71,7 @@ namespace DSproject
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            _SignUP.Show();
+            new SignUP(_st, _ac, _nav, _cl, _pf).Show();
         }
 
 
@@ -67,13 +80,12 @@ namespace DSproject
             string userName = textBox1.Text;
             string password = textBox2.Text;
 
-            if (accountManager.SignIn(userName, password))
+            if (_ac.SignIn(userName, password))
             {
                 //launching el homepage b2a .. el message box is temporary 
-                MessageBox.Show("Login successful!");
-                Close();
+                Hide();
+                new Form1( _st,_ac,_nav,_cl,_pf).Show();
             }
-
             else
             {
                 MessageBox.Show("Login failed. Please check your credentials.");

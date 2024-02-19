@@ -64,7 +64,8 @@ namespace SchoolManagementSystem.panels
         }
 
         private void ProfesorsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        { 
+        {
+            var selcted = this.searchResult[e.RowIndex];
             _nav.Display(_nav.classProfilePanel, this.searchResult[e.RowIndex]);
         }
     }
