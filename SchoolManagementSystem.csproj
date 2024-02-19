@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Forms\Form1.cs">
+    <Compile Update="Forms\SideBar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\NewClass.cs">
