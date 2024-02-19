@@ -57,6 +57,11 @@ namespace SchoolManagementSystem.panels
             }
         }
 
+        //public void LoadScreen()
+        //{
+        //    InitalaizeTable();
+        //}
+
         private void button1_Click(object sender, EventArgs e)
         {
             _nav.Display(_nav.professorsPanel);
