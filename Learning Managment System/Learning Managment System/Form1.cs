@@ -162,5 +162,43 @@ namespace Learning_Managment_System
             newClass.ShowDialog();
 
         }
+
+        private void newStudButt_Click_1(object sender, EventArgs e)
+        {
+            newStud newStud = new newStud();
+            newStud.ShowDialog();
+        }
+
+        private void newClassButt_Click_1(object sender, EventArgs e)
+        {
+            NewClass NewClass = new NewClass(); NewClass.ShowDialog();
+        }
+
+        private void newProffButt_Click_1(object sender, EventArgs e)
+        {
+            newProf newProf = new newProf();
+            newProf.ShowDialog();
+        }
+
+        private void controlPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void controlPicture1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlPanelButt_Click_1(object sender, EventArgs e)
+        {
+
+
+            controlPanel controlPanel = new controlPanel();
+
+            currentPanel.Controls.Add(controlPanel);
+
+
+        }
     }
 }
