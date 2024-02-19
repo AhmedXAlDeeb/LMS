@@ -44,7 +44,7 @@
             NameLabel = new Label();
             textBox1 = new TextBox();
             StudentsTable = new DataGridView();
-            Name = new DataGridViewTextBoxColumn();
+            stuName = new DataGridViewTextBoxColumn();
             ID = new DataGridViewTextBoxColumn();
             Grade = new DataGridViewTextBoxColumn();
             vScrollBar1 = new VScrollBar();
@@ -109,7 +109,7 @@
             StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             StudentsTable.ColumnHeadersHeight = 35;
             StudentsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            StudentsTable.Columns.AddRange(new DataGridViewColumn[] { Name, ID, Grade });
+            StudentsTable.Columns.AddRange(new DataGridViewColumn[] { stuName, ID, Grade });
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = SystemColors.Window;
             dataGridViewCellStyle5.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -137,21 +137,21 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            StudentsTable.Size = new Size(572, 288);
+            StudentsTable.Size = new Size(657, 277);
             StudentsTable.TabIndex = 4;
             StudentsTable.CellContentClick += dataGridView1_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
             StudentsTable.RowsRemoved += StudentsTable_RowsRemoved;
             // 
-            // Name
+            // stuName
             // 
             dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = Color.Transparent;
-            Name.DefaultCellStyle = dataGridViewCellStyle3;
-            Name.HeaderText = "Stu. Name";
-            Name.MinimumWidth = 6;
-            Name.Name = "Name";
-            Name.ReadOnly = true;
+            stuName.DefaultCellStyle = dataGridViewCellStyle3;
+            stuName.HeaderText = "Stu. Name";
+            stuName.MinimumWidth = 6;
+            stuName.Name = "stuName";
+            stuName.ReadOnly = true;
             // 
             // ID
             // 
@@ -171,9 +171,9 @@
             // 
             // vScrollBar1
             // 
-            vScrollBar1.Location = new Point(608, 337);
+            vScrollBar1.Location = new Point(675, 324);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(26, 224);
+            vScrollBar1.Size = new Size(26, 112);
             vScrollBar1.TabIndex = 5;
             vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
@@ -243,8 +243,8 @@
             Controls.Add(NameLabel);
             Controls.Add(button1);
             DoubleBuffered = true;
-            this.Name.Name = "ClassProfilePanel";
-            Size = new Size(800, 600);
+            Name = "ClassProfilePanel";
+            Size = new Size(911, 612);
             ((System.ComponentModel.ISupportInitialize)StudentsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -262,9 +262,9 @@
         private Label codeLabel;
         private Label hallLabel;
         private Label TimeLabel;
-        private DataGridViewTextBoxColumn Name;
+        private PictureBox pictureBox1;
+        private DataGridViewTextBoxColumn stuName;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Grade;
-        private PictureBox pictureBox1;
     }
 }
