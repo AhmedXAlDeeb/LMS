@@ -1,4 +1,5 @@
 using DSproject;
+using Learning_Managment_System;
 using Microsoft.Extensions.DependencyInjection;
 using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Services;
@@ -22,17 +23,18 @@ namespace WinFormsApp1
 
             // Services 
             services.AddSingleton<AppDbContext>();
-            services.AddTransient<SideBar>();
+            services.AddTransient<Form1>();
             services.AddTransient<StudentService>();
             services.AddTransient<ProfessorService>();
             services.AddSingleton<ControlsService>();
             services.AddSingleton<AccountManager>();
             services.AddTransient<ClassService>();
+            services.AddTransient<SignUP>();
+            services.AddTransient<SignIn>();
 
             using ServiceProvider serviceProvider = services.BuildServiceProvider();
-            var mainForm = serviceProvider.GetRequiredService<SideBar>();
+            var mainForm = serviceProvider.GetRequiredService<Form1>();
 
-            //Application.Run(new SignIn());
             Application.Run(mainForm);
         }
     }

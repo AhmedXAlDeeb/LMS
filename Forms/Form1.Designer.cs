@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1
+﻿namespace Learning_Managment_System
 {
-    partial class SideBar
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -153,6 +153,7 @@
             profPanelButt.TabIndex = 3;
             profPanelButt.Text = "Teachers";
             profPanelButt.UseVisualStyleBackColor = false;
+            profPanelButt.Click += profPanelButt_Click;
             // 
             // pictureBox4
             // 
@@ -196,6 +197,7 @@
             classPanelButt.TabIndex = 3;
             classPanelButt.Text = "Classes";
             classPanelButt.UseVisualStyleBackColor = false;
+            classPanelButt.Click += classPanelButt_Click;
             // 
             // pictureBox3
             // 
@@ -342,7 +344,7 @@
             currentPanel.TabIndex = 1;
             currentPanel.Paint += controlPanel_Paint;
             // 
-            // SideBar
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -350,7 +352,7 @@
             ClientSize = new Size(1062, 612);
             Controls.Add(currentPanel);
             Controls.Add(sideBar);
-            Name = "SideBar";
+            Name = "Form1";
             Text = "form1";
             Load += Form1_Load;
             sideBar.ResumeLayout(false);
@@ -372,7 +374,7 @@
 
         //public override bool Equals(object obj)
         //{
-        //    return obj is SideBar form &&
+        //    return obj is Form1 form &&
         //           EqualityComparer<PictureBox>.Default.Equals(this.pictureBox1, form.pictureBox1);
         //}
 

@@ -1,11 +1,10 @@
-using Learning_Managment_System;
 using SchoolManagementSystem.Models;
 using SchoolManagementSystem.panels;
 using SchoolManagementSystem.Services;
 
-namespace WinFormsApp1
+namespace Learning_Managment_System
 {
-    public partial class SideBar : Form
+    public partial class Form1 : Form
     {
         private List<UserControl>? controls;
         private ControlsService _nav;
@@ -30,7 +29,7 @@ namespace WinFormsApp1
 
             _nav.Display(_nav.classProfilePanel, classes[1]);
         }
-        public SideBar(
+        public Form1(
          StudentService st
         , AccountManager accountManager
         , ControlsService nav
@@ -198,8 +197,8 @@ namespace WinFormsApp1
 
         private void newProffButt_Click(object sender, EventArgs e)
         {
-            //newProf newProf = new newProf();
-            //newProf.ShowDialog();
+            newProf newProf = new newProf();
+            newProf.ShowDialog();
         }
 
         private void button4_Click_2(object sender, EventArgs e)
@@ -214,7 +213,7 @@ namespace WinFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            _nav.Display(_nav.studentsPanel);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -250,33 +249,33 @@ namespace WinFormsApp1
 
         private void newStudButt_Click(object sender, EventArgs e)
         {
-            //newStud Student = new newStud();
+            newStud Student = new newStud();
 
-            //Student.ShowDialog();
+            Student.ShowDialog();
         }
 
         private void newClassButt_Click(object sender, EventArgs e)
         {
-            //NewClass newClass = new NewClass();
-            //newClass.ShowDialog();
+            NewClass newClass = new NewClass();
+            newClass.ShowDialog();
 
         }
 
         private void newStudButt_Click_1(object sender, EventArgs e)
         {
-            //newStud newStud = new newStud();
-            //newStud.ShowDialog();
+            newStud newStud = new newStud();
+            newStud.ShowDialog();
         }
 
         private void newClassButt_Click_1(object sender, EventArgs e)
         {
-            //NewClass NewClass = new NewClass(); NewClass.ShowDialog();
+            NewClass NewClass = new NewClass(); NewClass.ShowDialog();
         }
 
         private void newProffButt_Click_1(object sender, EventArgs e)
         {
-            //newProf newProf = new newProf();
-            //newProf.ShowDialog();
+            newProf newProf = new newProf();
+            newProf.ShowDialog();
         }
 
         private void controlPanel_Paint(object sender, PaintEventArgs e)
@@ -291,13 +290,17 @@ namespace WinFormsApp1
 
         private void controlPanelButt_Click_1(object sender, EventArgs e)
         {
+            _nav.Display(_nav.controlPanel);
+        }
 
+        private void classPanelButt_Click(object sender, EventArgs e)
+        {
+            _nav.Display(_nav.classesPanel);
+        }
 
-            //ControlPanel ControlPanel = new ControlPanel();
-
-            //currentPanel.Controls.Add(ControlPanel);
-
-
+        private void profPanelButt_Click(object sender, EventArgs e)
+        {
+            _nav.Display(_nav.professorsPanel);
         }
     }
 }

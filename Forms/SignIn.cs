@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolManagementSystem.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,14 @@ namespace DSproject
 
     public partial class SignIn : Form
     {
-        //private readonly AccountManager accountManager;
+        private AccountManager accountManager;
+        private SignUP _SignUP;
 
-        public SignIn()
+        public SignIn(AccountManager accountManager, SignUP signUP)
         {
             InitializeComponent();
-           //accountManager = new AccountManager(new AppDbContext());
+            this.accountManager = accountManager;
+            this._SignUP = signUP;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,9 +57,8 @@ namespace DSproject
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SignUP signUpForm = new SignUP();
-            signUpForm.Show();
-            this.Close();
+            this.Hide();
+            _SignUP.Show();
         }
 
 
@@ -65,19 +67,17 @@ namespace DSproject
             string userName = textBox1.Text;
             string password = textBox2.Text;
 
-            //if (accountManager.SignIn(userName, password))
-            //{
-            //    //launching el homepage b2a .. el message box is temporary 
-            //    MessageBox.Show("Login successful!");
-            //    Close();
-            //}
-          
-            //else
-            //{
-            //    MessageBox.Show("Login failed. Please check your credentials.");
-            //}
+            if (accountManager.SignIn(userName, password))
+            {
+                //launching el homepage b2a .. el message box is temporary 
+                MessageBox.Show("Login successful!");
+                Close();
+            }
 
-         
+            else
+            {
+                MessageBox.Show("Login failed. Please check your credentials.");
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {
