@@ -47,8 +47,6 @@ namespace SchoolManagementSystem.panels
             TimeLabel.Text = $"{selectedClass.time}";
             codeLabel.Text = selectedClass.code;
             NameLabel.Text = selectedClass.name;
-            //for(int i = 0;i<selectedClass.)
-
             //label6.Text = selectedClass.name;
             if (selectedClass is null) return;
             var students = _st.AllClassStudents(selectedClass.code);

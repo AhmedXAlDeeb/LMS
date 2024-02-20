@@ -34,14 +34,13 @@
         /// DataGridViewTextBoxColumn name
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle29 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle30 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             button1 = new Button();
-            NameLabel = new Label();
             textBox1 = new TextBox();
             StudentsTable = new DataGridView();
             stuName = new DataGridViewTextBoxColumn();
@@ -49,16 +48,19 @@
             Grade = new DataGridViewTextBoxColumn();
             vScrollBar1 = new VScrollBar();
             SearchButton = new Button();
-            codeLabel = new Label();
-            hallLabel = new Label();
-            TimeLabel = new Label();
             pictureBox1 = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            panel1 = new Panel();
             label5 = new Label();
+            label1 = new Label();
+            TimeLabel = new Label();
+            label2 = new Label();
+            codeLabel = new Label();
+            label3 = new Label();
+            NameLabel = new Label();
+            label4 = new Label();
+            hallLabel = new Label();
+            panel1 = new Panel();
+            label6 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)StudentsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -74,18 +76,6 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // NameLabel
-            // 
-            NameLabel.AutoSize = true;
-            NameLabel.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            NameLabel.ForeColor = Color.FromArgb(0, 119, 133);
-            NameLabel.Location = new Point(359, 15);
-            NameLabel.Name = "NameLabel";
-            NameLabel.Size = new Size(119, 28);
-            NameLabel.TabIndex = 2;
-            NameLabel.Text = "Name Label";
-            NameLabel.Click += NameLabel_Click;
-            // 
             // textBox1
             // 
             textBox1.Location = new Point(356, 241);
@@ -100,45 +90,45 @@
             StudentsTable.AllowUserToAddRows = false;
             StudentsTable.AllowUserToDeleteRows = false;
             StudentsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = Color.FromArgb(233, 245, 247);
-            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(233, 245, 247);
+            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             StudentsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             StudentsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             StudentsTable.BackgroundColor = Color.FromArgb(233, 245, 247);
             StudentsTable.BorderStyle = BorderStyle.None;
             StudentsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             StudentsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle26.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle26.ForeColor = Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.True;
-            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle8.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             StudentsTable.ColumnHeadersHeight = 35;
             StudentsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             StudentsTable.Columns.AddRange(new DataGridViewColumn[] { stuName, ID, Grade });
-            dataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = SystemColors.Window;
-            dataGridViewCellStyle29.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle29.ForeColor = Color.Silver;
-            dataGridViewCellStyle29.SelectionBackColor = Color.FromArgb(252, 252, 252);
-            dataGridViewCellStyle29.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = DataGridViewTriState.False;
-            StudentsTable.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = SystemColors.Window;
+            dataGridViewCellStyle11.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = Color.Silver;
+            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(252, 252, 252);
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            StudentsTable.DefaultCellStyle = dataGridViewCellStyle11;
             StudentsTable.EnableHeadersVisualStyles = false;
             StudentsTable.Location = new Point(3, 291);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
-            dataGridViewCellStyle30.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = SystemColors.Control;
-            dataGridViewCellStyle30.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle30.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle30.WrapMode = DataGridViewTriState.True;
-            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Control;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             StudentsTable.RowHeadersVisible = false;
             StudentsTable.RowHeadersWidth = 51;
             StudentsTable.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Silver;
@@ -154,9 +144,9 @@
             // 
             // stuName
             // 
-            dataGridViewCellStyle27.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle27.SelectionForeColor = Color.Transparent;
-            stuName.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle9.SelectionForeColor = Color.Transparent;
+            stuName.DefaultCellStyle = dataGridViewCellStyle9;
             stuName.HeaderText = "Stu. Name";
             stuName.MinimumWidth = 6;
             stuName.Name = "stuName";
@@ -164,8 +154,8 @@
             // 
             // ID
             // 
-            dataGridViewCellStyle28.BackColor = Color.White;
-            ID.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            ID.DefaultCellStyle = dataGridViewCellStyle10;
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
@@ -199,40 +189,6 @@
             SearchButton.UseVisualStyleBackColor = false;
             SearchButton.Click += SearchButton_Click;
             // 
-            // codeLabel
-            // 
-            codeLabel.AutoSize = true;
-            codeLabel.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            codeLabel.ForeColor = Color.FromArgb(0, 119, 133);
-            codeLabel.Location = new Point(351, 83);
-            codeLabel.Name = "codeLabel";
-            codeLabel.Size = new Size(113, 28);
-            codeLabel.TabIndex = 7;
-            codeLabel.Text = "Code Label";
-            // 
-            // hallLabel
-            // 
-            hallLabel.AutoSize = true;
-            hallLabel.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            hallLabel.ForeColor = Color.FromArgb(0, 119, 133);
-            hallLabel.Location = new Point(76, 15);
-            hallLabel.Name = "hallLabel";
-            hallLabel.Size = new Size(102, 28);
-            hallLabel.TabIndex = 8;
-            hallLabel.Text = "Hall Label";
-            // 
-            // TimeLabel
-            // 
-            TimeLabel.AutoSize = true;
-            TimeLabel.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TimeLabel.ForeColor = Color.FromArgb(0, 119, 133);
-            TimeLabel.Location = new Point(87, 83);
-            TimeLabel.Name = "TimeLabel";
-            TimeLabel.Size = new Size(113, 28);
-            TimeLabel.TabIndex = 9;
-            TimeLabel.Text = "Time Label";
-            TimeLabel.Click += label3_Click;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.login__2_;
@@ -244,55 +200,114 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click_1;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Cascadia Mono", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(443, 24);
+            label5.Name = "label5";
+            label5.Size = new Size(360, 45);
+            label5.TabIndex = 15;
+            label5.Text = "Class Information";
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Coral;
             label1.Location = new Point(21, 83);
             label1.Name = "label1";
-            label1.Size = new Size(60, 29);
+            label1.Size = new Size(60, 27);
             label1.TabIndex = 11;
             label1.Text = "Time";
+            // 
+            // TimeLabel
+            // 
+            TimeLabel.AutoSize = true;
+            TimeLabel.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            TimeLabel.ForeColor = Color.FromArgb(0, 119, 133);
+            TimeLabel.Location = new Point(87, 83);
+            TimeLabel.Name = "TimeLabel";
+            TimeLabel.Size = new Size(132, 27);
+            TimeLabel.TabIndex = 9;
+            TimeLabel.Text = "Time Label";
+            TimeLabel.Click += label3_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Coral;
-            label2.Location = new Point(229, 82);
+            label2.Location = new Point(289, 14);
             label2.Name = "label2";
-            label2.Size = new Size(116, 29);
+            label2.Size = new Size(132, 27);
             label2.TabIndex = 12;
             label2.Text = "Class Code";
             label2.Click += label2_Click;
             // 
+            // codeLabel
+            // 
+            codeLabel.AutoSize = true;
+            codeLabel.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            codeLabel.ForeColor = Color.FromArgb(0, 119, 133);
+            codeLabel.Location = new Point(411, 14);
+            codeLabel.Name = "codeLabel";
+            codeLabel.Size = new Size(132, 27);
+            codeLabel.TabIndex = 7;
+            codeLabel.Text = "Code Label";
+            // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Coral;
             label3.Location = new Point(21, 15);
             label3.Name = "label3";
-            label3.Size = new Size(49, 29);
+            label3.Size = new Size(60, 27);
             label3.TabIndex = 13;
             label3.Text = "Hall";
             label3.Click += label3_Click_1;
             // 
+            // NameLabel
+            // 
+            NameLabel.AutoSize = true;
+            NameLabel.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            NameLabel.ForeColor = Color.FromArgb(0, 119, 133);
+            NameLabel.Location = new Point(150, 48);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new Size(132, 27);
+            NameLabel.TabIndex = 2;
+            NameLabel.Text = "Name Label";
+            NameLabel.Click += NameLabel_Click;
+            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Coral;
-            label4.Location = new Point(229, 15);
+            label4.Location = new Point(20, 48);
             label4.Name = "label4";
-            label4.Size = new Size(124, 29);
+            label4.Size = new Size(132, 27);
             label4.TabIndex = 14;
             label4.Text = "Class Name";
+            // 
+            // hallLabel
+            // 
+            hallLabel.AutoSize = true;
+            hallLabel.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            hallLabel.ForeColor = Color.FromArgb(0, 119, 133);
+            hallLabel.Location = new Point(76, 15);
+            hallLabel.Name = "hallLabel";
+            hallLabel.Size = new Size(132, 27);
+            hallLabel.TabIndex = 8;
+            hallLabel.Text = "Hall Label";
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(241, 241, 241);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label6);
             panel1.Controls.Add(hallLabel);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(NameLabel);
@@ -301,21 +316,32 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(TimeLabel);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(356, 86);
+            panel1.Location = new Point(330, 87);
             panel1.Name = "panel1";
-            panel1.Size = new Size(494, 125);
+            panel1.Size = new Size(552, 125);
             panel1.TabIndex = 15;
             // 
-            // label5
+            // label6
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Comic Sans MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.Coral;
-            label5.Location = new Point(443, 24);
-            label5.Name = "label5";
-            label5.Size = new Size(313, 48);
-            label5.TabIndex = 15;
-            label5.Text = "Class Information";
+            label6.AutoSize = true;
+            label6.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.Coral;
+            label6.Location = new Point(289, 48);
+            label6.Name = "label6";
+            label6.Size = new Size(180, 27);
+            label6.TabIndex = 15;
+            label6.Text = "Professor Name";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Cascadia Mono", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.FromArgb(0, 119, 133);
+            label7.Location = new Point(289, 85);
+            label7.Name = "label7";
+            label7.Size = new Size(192, 27);
+            label7.TabIndex = 16;
+            label7.Text = "Professor Label";
             // 
             // ClassProfilePanel
             // 
@@ -345,23 +371,25 @@
         #endregion
 
         private Button button1;
-        private Label NameLabel;
         private TextBox textBox1;
         private DataGridView StudentsTable;
         private VScrollBar vScrollBar1;
         private Button SearchButton;
-        private Label codeLabel;
-        private Label hallLabel;
-        private Label TimeLabel;
         private PictureBox pictureBox1;
         private DataGridViewTextBoxColumn stuName;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Grade;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Panel panel1;
         private Label label5;
+        private Label label1;
+        private Label TimeLabel;
+        private Label label2;
+        private Label codeLabel;
+        private Label label3;
+        private Label NameLabel;
+        private Label label4;
+        private Label hallLabel;
+        private Panel panel1;
+        private Label label7;
+        private Label label6;
     }
 }
