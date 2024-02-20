@@ -4,6 +4,21 @@
     <Compile Update="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Learning Managment System\Learning Managment System\controlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Learning Managment System\Learning Managment System\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning Managment System\Learning Managment System\NewClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning Managment System\Learning Managment System\newProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Learning Managment System\Learning Managment System\newStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="panels\ClassesPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

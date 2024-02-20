@@ -60,5 +60,10 @@ namespace SchoolManagementSystem.panels
         {
             StudentsTable.FirstDisplayedScrollingRowIndex = StudentsTable.Rows[e.OldValue].Index;
         }
+
+        private void profTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
