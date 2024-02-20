@@ -64,7 +64,7 @@ namespace SchoolManagementSystem.panels
         private void button1_Click(object sender, EventArgs e)
         {
             ProfesorsTable.Rows.Clear();
-            string fullName = textBox1.Text;
+            string fullName = searchBar.Text;
             Filter filter = new Filter();
             filter.SetName(fullName);
             this.searchResult = _pf.GetBy(filter);
@@ -78,6 +78,11 @@ namespace SchoolManagementSystem.panels
         }
 
         private void ProfessorsPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
