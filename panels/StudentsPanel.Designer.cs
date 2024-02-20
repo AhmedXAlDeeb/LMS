@@ -69,7 +69,7 @@
             StudentsTable.BorderStyle = BorderStyle.None;
             StudentsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             StudentsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(43, 180, 200);
             dataGridViewCellStyle2.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
@@ -89,7 +89,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             StudentsTable.DefaultCellStyle = dataGridViewCellStyle5;
             StudentsTable.EnableHeadersVisualStyles = false;
-            StudentsTable.Location = new Point(120, 287);
+            StudentsTable.Location = new Point(3, 287);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            StudentsTable.Size = new Size(657, 322);
+            StudentsTable.Size = new Size(879, 322);
             StudentsTable.TabIndex = 11;
             StudentsTable.CellContentClick += StudentsTable_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
@@ -141,7 +141,7 @@
             // 
             // vScrollBar1
             // 
-            vScrollBar1.Location = new Point(780, 287);
+            vScrollBar1.Location = new Point(885, 290);
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(26, 322);
             vScrollBar1.TabIndex = 12;

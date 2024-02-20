@@ -34,12 +34,12 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             ProfesorsTable = new DataGridView();
-            Name = new DataGridViewTextBoxColumn();
-            ID = new DataGridViewTextBoxColumn();
-            _Email = new DataGridViewTextBoxColumn();
             vScrollBar1 = new VScrollBar();
             textBox1 = new TextBox();
             button1 = new Button();
+            profName = new DataGridViewTextBoxColumn();
+            ID = new DataGridViewTextBoxColumn();
+            _Email = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)ProfesorsTable).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             ProfesorsTable.BorderStyle = BorderStyle.None;
             ProfesorsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ProfesorsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(43, 180, 200);
             dataGridViewCellStyle2.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
@@ -66,7 +66,7 @@
             ProfesorsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             ProfesorsTable.ColumnHeadersHeight = 35;
             ProfesorsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            ProfesorsTable.Columns.AddRange(new DataGridViewColumn[] { Name, ID, _Email });
+            ProfesorsTable.Columns.AddRange(new DataGridViewColumn[] { profName, ID, _Email });
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = SystemColors.Window;
             dataGridViewCellStyle5.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -76,7 +76,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             ProfesorsTable.DefaultCellStyle = dataGridViewCellStyle5;
             ProfesorsTable.EnableHeadersVisualStyles = false;
-            ProfesorsTable.Location = new Point(39, 115);
+            ProfesorsTable.Location = new Point(3, 178);
             ProfesorsTable.Name = "ProfesorsTable";
             ProfesorsTable.ReadOnly = true;
             ProfesorsTable.RowHeadersVisible = false;
@@ -87,21 +87,47 @@
             ProfesorsTable.RowTemplate.Height = 29;
             ProfesorsTable.ScrollBars = ScrollBars.None;
             ProfesorsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ProfesorsTable.Size = new Size(407, 371);
+            ProfesorsTable.Size = new Size(879, 431);
             ProfesorsTable.TabIndex = 6;
             ProfesorsTable.CellContentClick += StudentsTable_CellContentClick;
             ProfesorsTable.RowsAdded += StudentsTable_RowsAdded;
             ProfesorsTable.RowsRemoved += StudentsTable_RowsRemoved;
             // 
-            // Name
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(885, 178);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(26, 431);
+            vScrollBar1.TabIndex = 7;
+            vScrollBar1.Scroll += vScrollBar1_Scroll;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(244, 121);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(350, 34);
+            textBox1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(619, 121);
+            button1.Name = "button1";
+            button1.Size = new Size(66, 34);
+            button1.TabIndex = 9;
+            button1.Text = "Search";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // profName
             // 
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(224, 224, 224);
             dataGridViewCellStyle3.SelectionForeColor = Color.Transparent;
-            Name.DefaultCellStyle = dataGridViewCellStyle3;
-            Name.HeaderText = "Prof Name";
-            Name.MinimumWidth = 6;
-            Name.Name = "Name";
-            Name.ReadOnly = true;
+            profName.DefaultCellStyle = dataGridViewCellStyle3;
+            profName.HeaderText = "Prof Name";
+            profName.MinimumWidth = 6;
+            profName.Name = "profName";
+            profName.ReadOnly = true;
             // 
             // ID
             // 
@@ -119,32 +145,6 @@
             _Email.Name = "_Email";
             _Email.ReadOnly = true;
             // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(543, 115);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(26, 272);
-            vScrollBar1.TabIndex = 7;
-            vScrollBar1.Scroll += vScrollBar1_Scroll;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(29, 45);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(350, 34);
-            textBox1.TabIndex = 8;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(404, 45);
-            button1.Name = "button1";
-            button1.Size = new Size(66, 34);
-            button1.TabIndex = 9;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // ProfessorsPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -154,8 +154,8 @@
             Controls.Add(textBox1);
             Controls.Add(ProfesorsTable);
             Controls.Add(vScrollBar1);
-            this.Name.Name = "ProfessorsPanel";
-            Size = new Size(800, 600);
+            Name = "ProfessorsPanel";
+            Size = new Size(911, 612);
             Load += ProfessorsPanel_Load;
             ((System.ComponentModel.ISupportInitialize)ProfesorsTable).EndInit();
             ResumeLayout(false);
@@ -168,7 +168,7 @@
         private VScrollBar vScrollBar1;
         private TextBox textBox1;
         private Button button1;
-        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn profName;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn _Email;
     }
