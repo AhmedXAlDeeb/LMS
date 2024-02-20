@@ -155,7 +155,7 @@
             SearchButton.FlatStyle = FlatStyle.Flat;
             SearchButton.Font = new Font("Cascadia Mono", 9F, FontStyle.Bold, GraphicsUnit.Point);
             SearchButton.ForeColor = Color.White;
-            SearchButton.Location = new Point(154, 173);
+            SearchButton.Location = new Point(322, 186);
             SearchButton.Name = "SearchButton";
             SearchButton.Size = new Size(94, 34);
             SearchButton.TabIndex = 15;
@@ -165,7 +165,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(74, 120);
+            textBox1.Location = new Point(25, 186);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(272, 34);
@@ -175,12 +175,14 @@
             // studentsTitle
             // 
             studentsTitle.AutoSize = true;
-            studentsTitle.Font = new Font("Cascadia Mono", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            studentsTitle.Location = new Point(15, 25);
+            studentsTitle.FlatStyle = FlatStyle.Flat;
+            studentsTitle.Font = new Font("Cascadia Mono", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            studentsTitle.Location = new Point(25, 9);
             studentsTitle.Name = "studentsTitle";
-            studentsTitle.Size = new Size(391, 62);
+            studentsTitle.Size = new Size(349, 158);
             studentsTitle.TabIndex = 16;
-            studentsTitle.Text = "Students Data";
+            studentsTitle.Text = "Students \r\nData";
+            studentsTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // StudentsPanel
             // 

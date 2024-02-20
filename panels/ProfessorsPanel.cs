@@ -86,5 +86,10 @@ namespace SchoolManagementSystem.panels
         {
 
         }
+
+        private void studentsTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

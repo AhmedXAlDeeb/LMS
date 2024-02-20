@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Label classesTitle;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            Label classesTitle;
             ProfesorsTable = new DataGridView();
             className = new DataGridViewTextBoxColumn();
             ID = new DataGridViewTextBoxColumn();
@@ -44,6 +44,18 @@
             ((System.ComponentModel.ISupportInitialize)ProfesorsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // classesTitle
+            // 
+            classesTitle.AutoSize = true;
+            classesTitle.Font = new Font("Cascadia Mono", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            classesTitle.Location = new Point(34, 33);
+            classesTitle.Name = "classesTitle";
+            classesTitle.Size = new Size(279, 158);
+            classesTitle.TabIndex = 13;
+            classesTitle.Text = "Classes\r\nData";
+            classesTitle.TextAlign = ContentAlignment.MiddleCenter;
+            classesTitle.Click += label1_Click;
             // 
             // ProfesorsTable
             // 
@@ -59,10 +71,10 @@
             ProfesorsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ProfesorsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(218, 102, 64);
             dataGridViewCellStyle2.Font = new Font("Cascadia Code", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(218, 102, 64);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             ProfesorsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -139,18 +151,6 @@
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
-            // 
-            // classesTitle
-            // 
-            classesTitle.AutoSize = true;
-            classesTitle.Font = new Font("Cascadia Mono", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            classesTitle.Location = new Point(34, 33);
-            classesTitle.Name = "classesTitle";
-            classesTitle.Size = new Size(279, 158);
-            classesTitle.TabIndex = 13;
-            classesTitle.Text = "Classes\r\nData";
-            classesTitle.TextAlign = ContentAlignment.MiddleCenter;
-            classesTitle.Click += label1_Click;
             // 
             // ClassesPanel
             // 

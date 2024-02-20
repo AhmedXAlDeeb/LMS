@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
             ProfesorsTable = new DataGridView();
             profName = new DataGridViewTextBoxColumn();
             ID = new DataGridViewTextBoxColumn();
@@ -41,6 +41,7 @@
             searchBar = new TextBox();
             searchButt = new Button();
             profCover = new PictureBox();
+            studentsTitle = new Label();
             ((System.ComponentModel.ISupportInitialize)ProfesorsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)profCover).BeginInit();
             SuspendLayout();
@@ -50,35 +51,35 @@
             ProfesorsTable.AllowUserToAddRows = false;
             ProfesorsTable.AllowUserToDeleteRows = false;
             ProfesorsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(233, 245, 247);
-            ProfesorsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.BackColor = Color.FromArgb(233, 245, 247);
+            ProfesorsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             ProfesorsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ProfesorsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ProfesorsTable.BackgroundColor = Color.FromArgb(233, 245, 247);
             ProfesorsTable.BorderStyle = BorderStyle.None;
             ProfesorsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ProfesorsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle7.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            ProfesorsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle17.Font = new Font("Cascadia Mono", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle17.ForeColor = Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
+            ProfesorsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             ProfesorsTable.ColumnHeadersHeight = 35;
             ProfesorsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             ProfesorsTable.Columns.AddRange(new DataGridViewColumn[] { profName, ID, _Email });
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = SystemColors.Window;
-            dataGridViewCellStyle10.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = Color.Silver;
-            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(252, 252, 252);
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
-            ProfesorsTable.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = SystemColors.Window;
+            dataGridViewCellStyle20.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle20.ForeColor = Color.Silver;
+            dataGridViewCellStyle20.SelectionBackColor = Color.FromArgb(252, 252, 252);
+            dataGridViewCellStyle20.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
+            ProfesorsTable.DefaultCellStyle = dataGridViewCellStyle20;
             ProfesorsTable.EnableHeadersVisualStyles = false;
-            ProfesorsTable.Location = new Point(3, 183);
+            ProfesorsTable.Location = new Point(3, 221);
             ProfesorsTable.Name = "ProfesorsTable";
             ProfesorsTable.ReadOnly = true;
             ProfesorsTable.RowHeadersVisible = false;
@@ -89,7 +90,7 @@
             ProfesorsTable.RowTemplate.Height = 29;
             ProfesorsTable.ScrollBars = ScrollBars.None;
             ProfesorsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ProfesorsTable.Size = new Size(879, 426);
+            ProfesorsTable.Size = new Size(879, 388);
             ProfesorsTable.TabIndex = 6;
             ProfesorsTable.CellContentClick += StudentsTable_CellContentClick;
             ProfesorsTable.RowsAdded += StudentsTable_RowsAdded;
@@ -97,9 +98,9 @@
             // 
             // profName
             // 
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle8.SelectionForeColor = Color.Transparent;
-            profName.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle18.SelectionForeColor = Color.Transparent;
+            profName.DefaultCellStyle = dataGridViewCellStyle18;
             profName.HeaderText = "Prof Name";
             profName.MinimumWidth = 6;
             profName.Name = "profName";
@@ -107,8 +108,8 @@
             // 
             // ID
             // 
-            dataGridViewCellStyle9.BackColor = Color.White;
-            ID.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle19.BackColor = Color.White;
+            ID.DefaultCellStyle = dataGridViewCellStyle19;
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
@@ -132,12 +133,12 @@
             // searchBar
             // 
             searchBar.BorderStyle = BorderStyle.FixedSingle;
-            searchBar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            searchBar.Font = new Font("Cascadia Mono", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             searchBar.ForeColor = Color.FromArgb(43, 180, 200);
-            searchBar.Location = new Point(3, 141);
+            searchBar.Location = new Point(14, 170);
             searchBar.Name = "searchBar";
             searchBar.PlaceholderText = " Search for prof";
-            searchBar.Size = new Size(324, 27);
+            searchBar.Size = new Size(308, 27);
             searchBar.TabIndex = 8;
             searchBar.TextChanged += textBox1_TextChanged;
             // 
@@ -147,11 +148,11 @@
             searchButt.FlatAppearance.BorderSize = 0;
             searchButt.FlatAppearance.MouseDownBackColor = Color.Cyan;
             searchButt.FlatStyle = FlatStyle.Flat;
-            searchButt.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            searchButt.Font = new Font("Cascadia Mono", 9F, FontStyle.Bold, GraphicsUnit.Point);
             searchButt.ForeColor = Color.White;
-            searchButt.Location = new Point(344, 139);
+            searchButt.Location = new Point(335, 167);
             searchButt.Name = "searchButt";
-            searchButt.Size = new Size(66, 34);
+            searchButt.Size = new Size(75, 34);
             searchButt.TabIndex = 9;
             searchButt.Text = "Search";
             searchButt.UseVisualStyleBackColor = false;
@@ -160,18 +161,32 @@
             // profCover
             // 
             profCover.Image = Properties.Resources.login__6_1;
-            profCover.Location = new Point(444, 0);
+            profCover.Location = new Point(416, 3);
             profCover.Name = "profCover";
-            profCover.Size = new Size(438, 184);
+            profCover.Size = new Size(466, 212);
             profCover.SizeMode = PictureBoxSizeMode.Zoom;
             profCover.TabIndex = 10;
             profCover.TabStop = false;
+            // 
+            // studentsTitle
+            // 
+            studentsTitle.AutoSize = true;
+            studentsTitle.FlatStyle = FlatStyle.Flat;
+            studentsTitle.Font = new Font("Cascadia Mono", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            studentsTitle.Location = new Point(14, 3);
+            studentsTitle.Name = "studentsTitle";
+            studentsTitle.Size = new Size(419, 158);
+            studentsTitle.TabIndex = 17;
+            studentsTitle.Text = "Professors \r\nData";
+            studentsTitle.TextAlign = ContentAlignment.MiddleCenter;
+            studentsTitle.Click += studentsTitle_Click;
             // 
             // ProfessorsPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(studentsTitle);
             Controls.Add(profCover);
             Controls.Add(searchButt);
             Controls.Add(searchBar);
@@ -196,5 +211,6 @@
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn _Email;
         private PictureBox profCover;
+        private Label studentsTitle;
     }
 }
