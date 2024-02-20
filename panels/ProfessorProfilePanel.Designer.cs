@@ -256,7 +256,7 @@
             Controls.Add(profTitle);
             Controls.Add(profName);
             Controls.Add(pictureBox1);
-            Name = "ProfessorProfilePanel";
+            this.Name.Name = "ProfessorProfilePanel";
             Size = new Size(911, 612);
             Load += ProfessorProfilePanel_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

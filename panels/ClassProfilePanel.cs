@@ -26,7 +26,7 @@ namespace SchoolManagementSystem.panels
             base.OnVisibleChanged(e);
             if (this.Visible)
             {
-                if(selectedClass is null)return;
+                if (selectedClass is null) return;
                 InitalaizeTable();
             }
         }
@@ -47,6 +47,9 @@ namespace SchoolManagementSystem.panels
             TimeLabel.Text = $"{selectedClass.time}";
             codeLabel.Text = selectedClass.code;
             NameLabel.Text = selectedClass.name;
+            //for(int i = 0;i<selectedClass.)
+
+            //label6.Text = selectedClass.name;
             if (selectedClass is null) return;
             var students = _st.AllClassStudents(selectedClass.code);
             this.searchResut = students;
@@ -71,7 +74,7 @@ namespace SchoolManagementSystem.panels
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            _nav.Display(_nav.studentProfilePanel,this.searchResut[e.RowIndex]);
+            _nav.Display(_nav.studentProfilePanel, this.searchResut[e.RowIndex]);
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -136,6 +139,26 @@ namespace SchoolManagementSystem.panels
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
