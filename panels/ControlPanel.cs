@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Models;
+﻿using Microsoft.IdentityModel.Tokens;
+using SchoolManagementSystem.Models;
 using SchoolManagementSystem.panels;
 using SchoolManagementSystem.Services;
 using System;
@@ -72,7 +73,9 @@ namespace Learning_Managment_System
             importButt.Enabled = false;
             var di = new FolderBrowserDialog();
             di.ShowDialog();
-            _cl.ExportToCSV((string)pickClass.SelectedItem, di.SelectedPath);
+            if (_cl.ExportToCSV((string)pickClass.SelectedItem, di.SelectedPath)) {
+                MessageBox.Show("File exported successfully!");
+            }
             exportButt.Enabled = true;
             importButt.Enabled = true;
         }
@@ -92,11 +95,34 @@ namespace Learning_Managment_System
                     i++;
                 }
                 var dd = data.ToList().ToList();
+                ImportCSV(dd);
             }
         }
-        private List<Student> ImportCSV(List<List<string>> csv)
+        private void ImportCSV(List<string[]> csv)
         {
-            throw new NotImplementedException();
+            if (csv.IsNullOrEmpty()) {
+                MessageBox.Show("File imported successfully!");
+                return; 
+            }
+            //Name,Age,Phone,Email,Grade
+            foreach(var x in  csv) 
+            {
+                if (csv[0] == x) continue;
+                if(x.Length == 1) continue;
+                var name = x[1].Split(' ').ToList();
+                if(name.Count == 1) { name.Add(string.Empty); };
+                var student = new Student()
+                {
+                    firstName = name[0],
+                    lastName = name[1],
+                    age = int.Parse(x[2]),
+                    phone = x[3],
+                    email = x[4],
+                    grade = int.Parse(x[5])
+                };
+                _st.Add(student);
+                _st.AssignToClass(student,(string)pickClass.SelectedItem);
+            }
         }
     }
 }
