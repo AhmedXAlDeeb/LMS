@@ -29,6 +29,7 @@ namespace SchoolManagementSystem.panels
 
         public void initializeTable()
         {
+            ProfesorsTable.Rows.Clear();
             var professors = _pf.GetAll();
             this.searchResult = professors;
             //var students = _st.AllClassStudents(selectedClass.code);

@@ -16,18 +16,24 @@ namespace Learning_Managment_System
         private ClassService _cl;
         public void InitializeControls()
         {
+            userName.Text = _ac.admin.userName;
             controls = new List<UserControl>
             {
                 new ClassesPanel(_nav, _cl, _st, _pf),
                 new ProfessorsPanel(_nav, _pf),
                 new StudentsPanel(_nav, _st),
-                new ControlPanel(_nav, _st, _ac),
+                new ControlPanel(_st, _ac, _nav, _cl, _pf),
                 new ClassProfilePanel(_nav, _cl, _st, _pf),
                 new ProfessorProfilePanel(_nav, _cl, _st, _pf),
                 new StudentProfilePanel(_nav, _cl, _st, _pf)
             };
             _nav.Initialize(controls, currentPanel);
             _nav.Display(_nav.controlPanel);
+        }
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            InitializeControls();
         }
         public Form1(
          StudentService st
@@ -50,7 +56,7 @@ namespace Learning_Managment_System
         {
             var user = new Admin()
             {
-                userName = "Master",
+                userName = "admin",
                 password = "123"
             };
             _ac.SignUp(user.userName, user.password);
@@ -188,12 +194,6 @@ namespace Learning_Managment_System
 
         }
 
-        private void newProffButt_Click(object sender, EventArgs e)
-        {
-            newProf newProf = new newProf();
-            newProf.ShowDialog();
-        }
-
         private void button4_Click_2(object sender, EventArgs e)
         {
 
@@ -240,36 +240,8 @@ namespace Learning_Managment_System
         }
 
 
-        private void newStudButt_Click(object sender, EventArgs e)
-        {
-            newStud Student = new newStud();
 
-            Student.ShowDialog();
-        }
 
-        private void newClassButt_Click(object sender, EventArgs e)
-        {
-            NewClass newClass = new NewClass();
-            newClass.ShowDialog();
-
-        }
-
-        private void newStudButt_Click_1(object sender, EventArgs e)
-        {
-            newStud newStud = new newStud();
-            newStud.ShowDialog();
-        }
-
-        private void newClassButt_Click_1(object sender, EventArgs e)
-        {
-            NewClass NewClass = new NewClass(); NewClass.ShowDialog();
-        }
-
-        private void newProffButt_Click_1(object sender, EventArgs e)
-        {
-            newProf newProf = new newProf();
-            newProf.ShowDialog();
-        }
 
         private void controlPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -294,6 +266,12 @@ namespace Learning_Managment_System
         private void profPanelButt_Click(object sender, EventArgs e)
         {
             _nav.Display(_nav.professorsPanel);
+        }
+
+        private void exitButt_Click(object sender, EventArgs e)
+        {
+            Close();
+            new SignIn(_st, _ac, _nav, _cl, _pf).Show();
         }
     }
 }

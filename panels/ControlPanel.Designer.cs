@@ -281,6 +281,7 @@
             exportButt.TabIndex = 6;
             exportButt.Text = "Export Data";
             exportButt.UseVisualStyleBackColor = false;
+            exportButt.Click += exportButt_Click;
             // 
             // importButt
             // 
@@ -295,6 +296,7 @@
             importButt.TabIndex = 2;
             importButt.Text = "Import Data";
             importButt.UseVisualStyleBackColor = false;
+            importButt.Click += importButt_Click;
             // 
             // pickClass
             // 
@@ -305,6 +307,7 @@
             pickClass.Size = new Size(464, 28);
             pickClass.TabIndex = 5;
             pickClass.Text = "     Pick a class";
+            pickClass.SelectedIndexChanged += pickClass_SelectedIndexChanged;
             // 
             // controlPicture1
             // 

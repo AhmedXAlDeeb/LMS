@@ -7,9 +7,6 @@
     <Compile Update="panels\ControlPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Forms\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="panels\ClassesPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -37,7 +37,14 @@ namespace WinFormsApp1
             var _pf = serviceProvider.GetRequiredService<ProfessorService>();
             var _st = serviceProvider.GetRequiredService<StudentService>();
 
-            Application.Run(new SignIn(_st, _ac, _nav, _cl, _pf));
+            //Application.Run(new SignIn(_st, _ac, _nav, _cl, _pf));
+            var admin = new Admin()
+            {
+                userName = "admin",
+                password = "123"
+            };
+            _ac.SignIn(admin.userName, admin.password);
+            Application.Run(new Form1(_st, _ac, _nav, _cl, _pf));
         }
     }
 }

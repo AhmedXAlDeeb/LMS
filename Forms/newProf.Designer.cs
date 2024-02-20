@@ -93,6 +93,7 @@
             closeButt.TabIndex = 8;
             closeButt.Text = "Close";
             closeButt.UseVisualStyleBackColor = false;
+            closeButt.Click += closeButt_Click;
             // 
             // addButt
             // 
@@ -108,6 +109,7 @@
             addButt.TabIndex = 7;
             addButt.Text = "Add Prof";
             addButt.UseVisualStyleBackColor = false;
+            addButt.Click += addButt_Click;
             // 
             // dataInputPanel
             // 

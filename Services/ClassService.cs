@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using SchoolManagementSystem.Models;
 using System;
 using System.Collections.Generic;
@@ -83,21 +84,22 @@ namespace SchoolManagementSystem.Services
             }
             return classes;
         }
-        public void ExportToCSV(string classCode)
+        public void ExportToCSV(string classCode,string path)
         {
             var students = _st.AllClassStudents(classCode);
+            if (students.IsNullOrEmpty()) return;
             var sheet = new List<string>
             {
-                $"Id,{"Name",-30},Age,Phone,Email,Grade"
+                "Id,Name,Age,Phone,Email,Grade"
             };
             foreach (var student in students)
             {
                 StringBuilder row = new StringBuilder();
-                row.AppendLine($"{student.id},{student.firstName + " " + student.lastName}" +
+                row.Append($"{student.id},{student.firstName + " " + student.lastName}" +
                     $",{student.age},{student.phone},{student.email},{student.grade}");
                 sheet.Add(row.ToString());
             }
-            string file = $@"C:\Users\{Environment.UserName}\Downloads\{classCode}.csv";
+            string file = $@"{path}\{classCode}.csv";
             File.WriteAllLines(file, sheet);
             var p = new Process();
             p.StartInfo = new ProcessStartInfo(file)

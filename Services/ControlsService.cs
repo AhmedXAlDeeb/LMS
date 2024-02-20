@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Models;
+﻿using Learning_Managment_System;
+using SchoolManagementSystem.Models;
 using SchoolManagementSystem.panels;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,21 @@ namespace SchoolManagementSystem.Services
         }
         public void Display(int index)
         {
+            if(index == controlPanel)
+            {
+                var cp  = (ControlPanel)controls[index];
+                cp.InitializeData();
+            }
+            else if(index == professorsPanel)
+            {
+                var cp  = (ProfessorsPanel)controls[index];
+                cp.initializeTable();
+            }
+            else if(index == classesPanel)
+            {
+                var cp  = (ClassesPanel)controls[index];
+                cp.initializeTable();
+            }
             if (index < controls.Count())
             {
                 controls[index].BringToFront();

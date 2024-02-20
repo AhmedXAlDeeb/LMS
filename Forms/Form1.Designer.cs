@@ -83,6 +83,7 @@
             exitButt.TabIndex = 3;
             exitButt.Text = "exit";
             exitButt.UseVisualStyleBackColor = false;
+            exitButt.Click += exitButt_Click;
             // 
             // sideBar
             // 
