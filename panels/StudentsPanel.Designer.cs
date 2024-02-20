@@ -42,16 +42,17 @@
             vScrollBar1 = new VScrollBar();
             SearchButton = new Button();
             textBox1 = new TextBox();
+            studentsTitle = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)StudentsTable).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.login__2_;
-            pictureBox1.Location = new Point(105, 49);
+            pictureBox1.Image = Properties.Resources.login__9_;
+            pictureBox1.Location = new Point(422, 9);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(311, 232);
+            pictureBox1.Size = new Size(460, 248);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
@@ -69,9 +70,9 @@
             StudentsTable.BorderStyle = BorderStyle.None;
             StudentsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             StudentsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle2.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Cascadia Mono", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(43, 180, 200);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -89,7 +90,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             StudentsTable.DefaultCellStyle = dataGridViewCellStyle5;
             StudentsTable.EnableHeadersVisualStyles = false;
-            StudentsTable.Location = new Point(3, 287);
+            StudentsTable.Location = new Point(3, 263);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -107,7 +108,7 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            StudentsTable.Size = new Size(879, 322);
+            StudentsTable.Size = new Size(879, 346);
             StudentsTable.TabIndex = 11;
             StudentsTable.CellContentClick += StudentsTable_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
@@ -149,26 +150,44 @@
             // 
             // SearchButton
             // 
-            SearchButton.Location = new Point(723, 223);
+            SearchButton.BackColor = Color.FromArgb(43, 180, 200);
+            SearchButton.FlatAppearance.BorderSize = 0;
+            SearchButton.FlatStyle = FlatStyle.Flat;
+            SearchButton.Font = new Font("Cascadia Mono", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            SearchButton.ForeColor = Color.White;
+            SearchButton.Location = new Point(154, 173);
             SearchButton.Name = "SearchButton";
             SearchButton.Size = new Size(94, 34);
             SearchButton.TabIndex = 15;
             SearchButton.Text = "search";
-            SearchButton.UseVisualStyleBackColor = true;
+            SearchButton.UseVisualStyleBackColor = false;
             SearchButton.Click += SearchButton_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(483, 223);
+            textBox1.Location = new Point(74, 120);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(210, 34);
+            textBox1.Size = new Size(272, 34);
             textBox1.TabIndex = 14;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // studentsTitle
+            // 
+            studentsTitle.AutoSize = true;
+            studentsTitle.Font = new Font("Cascadia Mono", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            studentsTitle.Location = new Point(15, 25);
+            studentsTitle.Name = "studentsTitle";
+            studentsTitle.Size = new Size(391, 62);
+            studentsTitle.TabIndex = 16;
+            studentsTitle.Text = "Students Data";
             // 
             // StudentsPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            Controls.Add(studentsTitle);
             Controls.Add(SearchButton);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
@@ -192,5 +211,6 @@
         private VScrollBar vScrollBar1;
         private Button SearchButton;
         private TextBox textBox1;
+        private Label studentsTitle;
     }
 }
