@@ -84,10 +84,10 @@ namespace SchoolManagementSystem.Services
             }
             return classes;
         }
-        public void ExportToCSV(string classCode,string path)
+        public bool ExportToCSV(string classCode,string path)
         {
             var students = _st.AllClassStudents(classCode);
-            if (students.IsNullOrEmpty()) return;
+            if (students.IsNullOrEmpty()) return false;
             var sheet = new List<string>
             {
                 "Id,Name,Age,Phone,Email,Grade"
@@ -107,6 +107,7 @@ namespace SchoolManagementSystem.Services
                 UseShellExecute = true
             };
             p.Start();
+            return true;
         }
     }
 }
