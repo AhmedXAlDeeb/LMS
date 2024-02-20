@@ -33,12 +33,16 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Label classesTitle;
             ProfesorsTable = new DataGridView();
-            vScrollBar1 = new VScrollBar();
             className = new DataGridViewTextBoxColumn();
             ID = new DataGridViewTextBoxColumn();
             _Email = new DataGridViewTextBoxColumn();
+            vScrollBar1 = new VScrollBar();
+            pictureBox1 = new PictureBox();
+            classesTitle = new Label();
             ((System.ComponentModel.ISupportInitialize)ProfesorsTable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // ProfesorsTable
@@ -54,9 +58,9 @@
             ProfesorsTable.BorderStyle = BorderStyle.None;
             ProfesorsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             ProfesorsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle2.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Cascadia Code", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(43, 180, 200);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -74,7 +78,7 @@
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             ProfesorsTable.DefaultCellStyle = dataGridViewCellStyle5;
             ProfesorsTable.EnableHeadersVisualStyles = false;
-            ProfesorsTable.Location = new Point(3, 109);
+            ProfesorsTable.Location = new Point(3, 232);
             ProfesorsTable.Name = "ProfesorsTable";
             ProfesorsTable.ReadOnly = true;
             ProfesorsTable.RowHeadersVisible = false;
@@ -85,19 +89,11 @@
             ProfesorsTable.RowTemplate.Height = 29;
             ProfesorsTable.ScrollBars = ScrollBars.None;
             ProfesorsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ProfesorsTable.Size = new Size(876, 500);
+            ProfesorsTable.Size = new Size(876, 377);
             ProfesorsTable.TabIndex = 10;
             ProfesorsTable.CellContentClick += ProfesorsTable_CellContentClick;
             ProfesorsTable.RowsAdded += ProfesorsTable_RowsAdded;
             ProfesorsTable.RowsRemoved += ProfesorsTable_RowsRemoved;
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(882, 145);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(26, 464);
-            vScrollBar1.TabIndex = 11;
-            vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
             // className
             // 
@@ -125,18 +121,53 @@
             _Email.Name = "_Email";
             _Email.ReadOnly = true;
             // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(882, 145);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(26, 464);
+            vScrollBar1.TabIndex = 11;
+            vScrollBar1.Scroll += vScrollBar1_Scroll;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.login__8_;
+            pictureBox1.Location = new Point(340, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(539, 230);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // classesTitle
+            // 
+            classesTitle.AutoSize = true;
+            classesTitle.Font = new Font("Cascadia Mono", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            classesTitle.Location = new Point(34, 33);
+            classesTitle.Name = "classesTitle";
+            classesTitle.Size = new Size(279, 158);
+            classesTitle.TabIndex = 13;
+            classesTitle.Text = "Classes\r\nData";
+            classesTitle.TextAlign = ContentAlignment.MiddleCenter;
+            classesTitle.Click += label1_Click;
+            // 
             // ClassesPanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(classesTitle);
+            Controls.Add(pictureBox1);
             Controls.Add(ProfesorsTable);
             Controls.Add(vScrollBar1);
             Name = "ClassesPanel";
             Size = new Size(911, 612);
             Load += ClassesPanel_Load;
             ((System.ComponentModel.ISupportInitialize)ProfesorsTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -145,5 +176,7 @@
         private DataGridViewTextBoxColumn className;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn _Email;
+        private PictureBox pictureBox1;
+        private Label classesTitle;
     }
 }

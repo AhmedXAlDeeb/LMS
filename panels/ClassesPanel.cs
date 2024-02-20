@@ -69,5 +69,16 @@ namespace SchoolManagementSystem.panels
             var selcted = this.searchResult[e.RowIndex];
             _nav.Display(_nav.classProfilePanel, this.searchResult[e.RowIndex]);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

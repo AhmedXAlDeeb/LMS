@@ -28,6 +28,7 @@ namespace SchoolManagementSystem.panels
 
         public void initializeTable()
         {
+            StudentsTable.Rows.Clear();
             var students = _st.GetAll();
             this.searchResult = students;
             //var students = _st.AllClassStudents(selectedClass.code);
@@ -76,6 +77,11 @@ namespace SchoolManagementSystem.panels
                     $"{this.searchResult[i].firstName} {this.searchResult[i].lastName}" ,$"{this.searchResult[i].id}",$"{this.searchResult[i].grade}"
                 });
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

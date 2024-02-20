@@ -54,6 +54,11 @@ namespace SchoolManagementSystem.Services
                 var cp  = (ClassesPanel)controls[index];
                 cp.initializeTable();
             }
+            else if(index == studentsPanel)
+            {
+                var cp  = (StudentsPanel)controls[index];
+                cp.initializeTable();
+            }
             if (index < controls.Count())
             {
                 controls[index].BringToFront();
