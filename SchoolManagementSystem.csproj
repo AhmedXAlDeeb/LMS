@@ -40,6 +40,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Forms\EditClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\EditProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\EditStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -52,5 +61,8 @@
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="temp\" />
 	</ItemGroup>
 </Project>

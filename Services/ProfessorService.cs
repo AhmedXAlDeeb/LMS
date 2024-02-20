@@ -30,6 +30,14 @@ namespace SchoolManagementSystem.Services
             _db.SaveChanges();
             return true;
         }
+        public bool Update(Professor member)
+        {
+            var exist = _db.professors.FirstOrDefault(x => x.id == member.id);
+            if (exist is null) return false;
+            _db.professors.Update(member);
+            _db.SaveChanges();
+            return true;
+        }
         public bool Remove(Professor member)
         {
             if (member is null) { return false; }

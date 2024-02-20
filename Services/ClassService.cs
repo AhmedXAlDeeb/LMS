@@ -30,6 +30,14 @@ namespace SchoolManagementSystem.Services
             _db.classes.Add(_class);
             _db.SaveChanges();
             return true;
+        }        
+        public bool Update(Class _class)
+        {
+            var exist = _db.classes.FirstOrDefault(x => x.Id == _class.Id);
+            if (exist is null) return false;
+            _db.classes.Update(_class);
+            _db.SaveChanges();
+            return true;
         }
         public bool Remove(Class _class)
         {
