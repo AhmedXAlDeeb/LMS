@@ -185,11 +185,7 @@
             StudentsTable.RowTemplate.Height = 29;
             StudentsTable.ScrollBars = ScrollBars.None;
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-<<<<<<< HEAD
             StudentsTable.Size = new Size(737, 211);
-=======
-            StudentsTable.Size = new Size(684, 216);
->>>>>>> 4255d395f873e800225b7992daef167f6ded8e15
             StudentsTable.TabIndex = 8;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
             StudentsTable.RowsRemoved += StudentsTable_RowsRemoved;
@@ -261,11 +257,7 @@
             Controls.Add(profTitle);
             Controls.Add(profName);
             Controls.Add(pictureBox1);
-<<<<<<< HEAD
-            Name = "ProfessorProfilePanel";
-=======
             this.Name.Name = "ProfessorProfilePanel";
->>>>>>> 4255d395f873e800225b7992daef167f6ded8e15
             Size = new Size(911, 612);
             Load += ProfessorProfilePanel_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
