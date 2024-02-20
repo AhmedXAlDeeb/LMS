@@ -58,8 +58,8 @@ namespace Learning_Managment_System
             }
             var studnet = new Student()
             {
-                firstName = firstName.Text,
-                lastName = lastName.Text,
+                firstName = firstNameInput.Text,
+                lastName = lastNameInput.Text,
                 age = int.Parse(ageInput.Text),
                 email = emailInput.Text,
                 phone = phoneInput.Text,
@@ -72,7 +72,8 @@ namespace Learning_Managment_System
         {
             if (!char.IsAsciiDigit(ageInput.Text.LastOrDefault()))
             {
-                ageInput.Text.Remove(Text.Length - 1);
+                if(ageInput.Text.Length > 0)
+                    ageInput.Text.Remove(Text.Length - 1);
             }
         }
 

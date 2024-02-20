@@ -28,6 +28,7 @@ namespace SchoolManagementSystem.panels
 
         public void initializeTable()
         {
+            StudentsTable.Rows.Clear();
             var students = _st.GetAll();
             this.searchResult = students;
             //var students = _st.AllClassStudents(selectedClass.code);
