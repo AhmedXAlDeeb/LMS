@@ -30,6 +30,10 @@ namespace SchoolManagementSystem.panels
 
         private void ProfessorProfilePanel_Load(object sender, EventArgs e)
         {
+
+        }
+        public void InitalaizeTable()
+        {
             if (selectedProfessor != null)
             {
                 profName.Text = $" {selectedProfessor.firstName} {selectedProfessor.lastName}";

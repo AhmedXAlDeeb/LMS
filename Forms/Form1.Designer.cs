@@ -83,6 +83,7 @@
             exitButt.TabIndex = 3;
             exitButt.Text = "exit";
             exitButt.UseVisualStyleBackColor = false;
+            exitButt.Click += exitButt_Click;
             // 
             // sideBar
             // 
@@ -116,7 +117,7 @@
             // pictureBox12
             // 
             pictureBox12.Dock = DockStyle.Left;
-            pictureBox12.Image = Properties.Resources.exit;
+            pictureBox12.Image = SchoolManagementSystem.Properties.Resources.exit1;
             pictureBox12.Location = new Point(0, 0);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new Size(55, 42);
@@ -153,12 +154,13 @@
             profPanelButt.TabIndex = 3;
             profPanelButt.Text = "Teachers";
             profPanelButt.UseVisualStyleBackColor = false;
+            profPanelButt.Click += profPanelButt_Click;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.White;
             pictureBox4.Dock = DockStyle.Left;
-            pictureBox4.Image = Properties.Resources.teacher;
+            pictureBox4.Image = SchoolManagementSystem.Properties.Resources.teacher1;
             pictureBox4.Location = new Point(0, 0);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(63, 74);
@@ -196,11 +198,12 @@
             classPanelButt.TabIndex = 3;
             classPanelButt.Text = "Classes";
             classPanelButt.UseVisualStyleBackColor = false;
+            classPanelButt.Click += classPanelButt_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.Dock = DockStyle.Left;
-            pictureBox3.Image = Properties.Resources._class;
+            pictureBox3.Image = SchoolManagementSystem.Properties.Resources.class1;
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(55, 74);
@@ -243,7 +246,7 @@
             // 
             pictureBox2.BackColor = Color.White;
             pictureBox2.Dock = DockStyle.Left;
-            pictureBox2.Image = Properties.Resources.student;
+            pictureBox2.Image = SchoolManagementSystem.Properties.Resources.student1;
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(63, 74);
@@ -265,7 +268,7 @@
             // controlPanelIcon
             // 
             controlPanelIcon.Dock = DockStyle.Left;
-            controlPanelIcon.Image = Properties.Resources.home;
+            controlPanelIcon.Image = SchoolManagementSystem.Properties.Resources.home1;
             controlPanelIcon.Location = new Point(0, 0);
             controlPanelIcon.Name = "controlPanelIcon";
             controlPanelIcon.Size = new Size(55, 74);
@@ -318,7 +321,7 @@
             // 
             // profilePic
             // 
-            profilePic.Image = Properties.Resources.account;
+            profilePic.Image = SchoolManagementSystem.Properties.Resources.account111;
             profilePic.Location = new Point(3, 0);
             profilePic.Name = "profilePic";
             profilePic.Size = new Size(144, 69);

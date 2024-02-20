@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Learning_Managment_System;
+using Microsoft.EntityFrameworkCore.Update;
+using SchoolManagementSystem.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +15,25 @@ namespace DSproject
 {
     public partial class SignUP : Form
     {
-        //private readonly AccountManager accountManager;
-        public SignUP()
+        private ControlsService _nav;
+        private StudentService _st;
+        private ProfessorService _pf;
+        private AccountManager _ac;
+        private ClassService _cl;
+
+        public SignUP(
+         StudentService st
+        , AccountManager ac
+        , ControlsService nav
+        , ClassService cl
+        , ProfessorService pf)
         {
             InitializeComponent();
-            //accountManager = new AccountManager(new AppDbContext());
+            _st = st;
+            _ac = ac;
+            _cl = cl;
+            _nav = nav;
+            _pf = pf;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -46,17 +63,16 @@ namespace DSproject
             }
             else
             {
-                //if (accountManager.SignUp(userName, password))
-                //{
-                //    MessageBox.Show("Sign-up successful!");
-                //    // launching another window
-                //    this.Close();
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Username already exists. Please choose a different username.");
-                //}
-
+                if (_ac.SignUp(userName, password))
+                {
+                    MessageBox.Show("Sign-up successful!");
+                    // launching another window
+                    new SignIn(_st, _ac, _nav, _cl, _pf).Show();
+                }
+                else
+                {
+                    MessageBox.Show("Username already exists. Please choose a different username.");
+                }
             }
 
         }

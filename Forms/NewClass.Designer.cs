@@ -61,7 +61,7 @@
             // coverPic
             // 
             coverPic.BackColor = Color.White;
-            coverPic.Image = Properties.Resources.login__6_;
+            coverPic.Image = SchoolManagementSystem.Properties.Resources.login__6_1;
             coverPic.Location = new Point(3, 3);
             coverPic.Name = "coverPic";
             coverPic.Size = new Size(375, 147);
@@ -93,6 +93,7 @@
             closeButt.TabIndex = 8;
             closeButt.Text = "Close";
             closeButt.UseVisualStyleBackColor = false;
+            closeButt.Click += closeButt_Click;
             // 
             // addButt
             // 
@@ -108,6 +109,7 @@
             addButt.TabIndex = 7;
             addButt.Text = "Add Class";
             addButt.UseVisualStyleBackColor = false;
+            addButt.Click += addButt_Click;
             // 
             // dataInputPanel
             // 
@@ -148,6 +150,7 @@
             timeInput.Name = "timeInput";
             timeInput.Size = new Size(185, 27);
             timeInput.TabIndex = 9;
+            timeInput.TextChanged += timeInput_TextChanged;
             // 
             // label1
             // 
@@ -155,9 +158,9 @@
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(18, 59);
             label1.Name = "label1";
-            label1.Size = new Size(101, 25);
+            label1.Size = new Size(62, 25);
             label1.TabIndex = 2;
-            label1.Text = "Last Name";
+            label1.Text = "Name";
             // 
             // hallInput
             // 

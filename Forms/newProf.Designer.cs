@@ -61,7 +61,7 @@
             // coverPic
             // 
             coverPic.BackColor = Color.White;
-            coverPic.Image = Properties.Resources.login__5_;
+            coverPic.Image = SchoolManagementSystem.Properties.Resources.login__5_1;
             coverPic.Location = new Point(3, 12);
             coverPic.Name = "coverPic";
             coverPic.Size = new Size(375, 117);
@@ -93,6 +93,7 @@
             closeButt.TabIndex = 8;
             closeButt.Text = "Close";
             closeButt.UseVisualStyleBackColor = false;
+            closeButt.Click += closeButt_Click;
             // 
             // addButt
             // 
@@ -108,6 +109,7 @@
             addButt.TabIndex = 7;
             addButt.Text = "Add Prof";
             addButt.UseVisualStyleBackColor = false;
+            addButt.Click += addButt_Click;
             // 
             // dataInputPanel
             // 

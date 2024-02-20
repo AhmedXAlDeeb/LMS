@@ -1,49 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Forms\MainForm.cs">
+    <Compile Update="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Learning Managment System\Learning Managment System\controlPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Learning Managment System\Learning Managment System\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Learning Managment System\Learning Managment System\NewClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Learning Managment System\Learning Managment System\newProf.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Learning Managment System\Learning Managment System\newStud.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="panels\ClassesPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="panels\ClassProfilePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="panels\ControlPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="panels\ProfessorProfilePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="panels\ProfessorsPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="panels\StudentProfilePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="panels\StudentsPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="panels\StudentProfilePanel.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

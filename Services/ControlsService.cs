@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Models;
+﻿using Learning_Managment_System;
+using SchoolManagementSystem.Models;
 using SchoolManagementSystem.panels;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,26 @@ namespace SchoolManagementSystem.Services
         }
         public void Display(int index)
         {
+            if(index == controlPanel)
+            {
+                var cp  = (ControlPanel)controls[index];
+                cp.InitializeData();
+            }
+            else if(index == professorsPanel)
+            {
+                var cp  = (ProfessorsPanel)controls[index];
+                cp.initializeTable();
+            }
+            else if(index == classesPanel)
+            {
+                var cp  = (ClassesPanel)controls[index];
+                cp.initializeTable();
+            }
+            else if(index == studentsPanel)
+            {
+                var cp  = (StudentsPanel)controls[index];
+                cp.initializeTable();
+            }
             if (index < controls.Count())
             {
                 controls[index].BringToFront();
@@ -48,6 +69,8 @@ namespace SchoolManagementSystem.Services
             StudentProfilePanel.selectedStudent = student;
             if (index < controls.Count())
             {
+                var cp = (StudentProfilePanel)controls[index];
+                cp.InitalaizeTable();
                 controls[index].BringToFront();
             }
         }
@@ -56,6 +79,8 @@ namespace SchoolManagementSystem.Services
             ProfessorProfilePanel.selectedProfessor = professor;
             if (index < controls.Count())
             {
+                var cp = (ProfessorProfilePanel)controls[index];
+                cp.InitalaizeTable();
                 controls[index].BringToFront();
             }
         }
@@ -64,6 +89,8 @@ namespace SchoolManagementSystem.Services
             ClassProfilePanel.selectedClass = _class;
             if (index < controls.Count())
             {
+                var panel = (ClassProfilePanel)controls[index];
+                panel.InitalaizeTable();
                 controls[index].BringToFront();
             }
         }

@@ -41,10 +41,10 @@
             ageInput = new TextBox();
             dataInputPanel = new Panel();
             buttonPanel = new Panel();
+            closeButt = new Button();
+            addButt = new Button();
             coverPanel = new Panel();
             coverPic = new PictureBox();
-            addButt = new Button();
-            closeButt = new Button();
             dataInputPanel.SuspendLayout();
             buttonPanel.SuspendLayout();
             coverPanel.SuspendLayout();
@@ -148,6 +148,7 @@
             ageInput.Name = "ageInput";
             ageInput.Size = new Size(185, 27);
             ageInput.TabIndex = 10;
+            ageInput.TextChanged += ageInput_TextChanged;
             // 
             // dataInputPanel
             // 
@@ -178,25 +179,21 @@
             buttonPanel.TabIndex = 12;
             buttonPanel.Paint += buttonPanel_Paint;
             // 
-            // coverPanel
+            // closeButt
             // 
-            coverPanel.BackColor = Color.White;
-            coverPanel.Controls.Add(coverPic);
-            coverPanel.Location = new Point(0, 54);
-            coverPanel.Name = "coverPanel";
-            coverPanel.Size = new Size(375, 145);
-            coverPanel.TabIndex = 13;
-            // 
-            // coverPic
-            // 
-            coverPic.BackColor = Color.White;
-            coverPic.Image = Properties.Resources.login__4_1;
-            coverPic.Location = new Point(0, 0);
-            coverPic.Name = "coverPic";
-            coverPic.Size = new Size(375, 117);
-            coverPic.SizeMode = PictureBoxSizeMode.Zoom;
-            coverPic.TabIndex = 0;
-            coverPic.TabStop = false;
+            closeButt.BackColor = Color.White;
+            closeButt.FlatAppearance.BorderColor = Color.FromArgb(43, 180, 200);
+            closeButt.FlatAppearance.BorderSize = 0;
+            closeButt.FlatStyle = FlatStyle.Flat;
+            closeButt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            closeButt.ForeColor = Color.FromArgb(43, 180, 200);
+            closeButt.Location = new Point(17, 25);
+            closeButt.Name = "closeButt";
+            closeButt.Size = new Size(142, 38);
+            closeButt.TabIndex = 8;
+            closeButt.Text = "Close";
+            closeButt.UseVisualStyleBackColor = false;
+            closeButt.Click += closeButt_Click;
             // 
             // addButt
             // 
@@ -212,21 +209,27 @@
             addButt.TabIndex = 7;
             addButt.Text = "Add Student ";
             addButt.UseVisualStyleBackColor = false;
+            addButt.Click += addButt_Click;
             // 
-            // closeButt
+            // coverPanel
             // 
-            closeButt.BackColor = Color.White;
-            closeButt.FlatAppearance.BorderColor = Color.FromArgb(43, 180, 200);
-            closeButt.FlatAppearance.BorderSize = 0;
-            closeButt.FlatStyle = FlatStyle.Flat;
-            closeButt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            closeButt.ForeColor = Color.FromArgb(43, 180, 200);
-            closeButt.Location = new Point(17, 25);
-            closeButt.Name = "closeButt";
-            closeButt.Size = new Size(142, 38);
-            closeButt.TabIndex = 8;
-            closeButt.Text = "Close";
-            closeButt.UseVisualStyleBackColor = false;
+            coverPanel.BackColor = Color.White;
+            coverPanel.Controls.Add(coverPic);
+            coverPanel.Location = new Point(0, 54);
+            coverPanel.Name = "coverPanel";
+            coverPanel.Size = new Size(375, 145);
+            coverPanel.TabIndex = 13;
+            // 
+            // coverPic
+            // 
+            coverPic.BackColor = Color.White;
+            coverPic.Image = SchoolManagementSystem.Properties.Resources.login__4_11;
+            coverPic.Location = new Point(0, 0);
+            coverPic.Name = "coverPic";
+            coverPic.Size = new Size(375, 117);
+            coverPic.SizeMode = PictureBoxSizeMode.Zoom;
+            coverPic.TabIndex = 0;
+            coverPic.TabStop = false;
             // 
             // newStud
             // 
