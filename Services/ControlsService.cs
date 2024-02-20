@@ -64,6 +64,8 @@ namespace SchoolManagementSystem.Services
             StudentProfilePanel.selectedStudent = student;
             if (index < controls.Count())
             {
+                var cp = (StudentProfilePanel)controls[index];
+                cp.InitalaizeTable();
                 controls[index].BringToFront();
             }
         }
@@ -72,6 +74,8 @@ namespace SchoolManagementSystem.Services
             ProfessorProfilePanel.selectedProfessor = professor;
             if (index < controls.Count())
             {
+                var cp = (ProfessorProfilePanel)controls[index];
+                cp.InitalaizeTable();
                 controls[index].BringToFront();
             }
         }

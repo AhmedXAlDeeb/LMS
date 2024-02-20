@@ -46,10 +46,7 @@ namespace SchoolManagementSystem.panels
                 }
             }
         }
-
-        
-
-        private void StudentProfilePanel_Load(object sender, EventArgs e)
+        public void InitalaizeTable()
         {
             if (selectedStudent != null)
             {
@@ -60,20 +57,16 @@ namespace SchoolManagementSystem.panels
                 stuGrade.Text = $"{selectedStudent.grade}";
                 stuID.Text = $"{selectedStudent.id}";
             }
+        }
+
+        private void StudentProfilePanel_Load(object sender, EventArgs e)
+        {
+
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (selectedStudent != null)
-            {
-                stuName.Text = $" Mostafa {selectedStudent.lastName}";
-                stuAge.Text = $"{selectedStudent.age}";
-                stuEmail.Text = $"{selectedStudent.email}";
-                stuPhone.Text = $"{selectedStudent.phone}";
-                stuGrade.Text = $"{selectedStudent.grade}";
-                stuID.Text = $"{selectedStudent.id}";
-            }
         }
 
         private void label1_Click(object sender, EventArgs e)
