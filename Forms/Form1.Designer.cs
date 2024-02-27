@@ -139,18 +139,18 @@
             // profPanelButt
             // 
             profPanelButt.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            profPanelButt.BackColor = Color.White;
+            profPanelButt.BackColor = Color.FromArgb(43, 180, 200);
             profPanelButt.BackgroundImageLayout = ImageLayout.Center;
             profPanelButt.Dock = DockStyle.Right;
             profPanelButt.FlatAppearance.BorderSize = 0;
             profPanelButt.FlatStyle = FlatStyle.Flat;
-            profPanelButt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            profPanelButt.ForeColor = Color.FromArgb(43, 180, 200);
+            profPanelButt.Font = new Font("Cascadia Mono SemiBold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            profPanelButt.ForeColor = Color.White;
             profPanelButt.ImageAlign = ContentAlignment.MiddleLeft;
-            profPanelButt.Location = new Point(54, 0);
+            profPanelButt.Location = new Point(43, 0);
             profPanelButt.Margin = new Padding(0, 6, 0, 6);
             profPanelButt.Name = "profPanelButt";
-            profPanelButt.Size = new Size(92, 74);
+            profPanelButt.Size = new Size(103, 74);
             profPanelButt.TabIndex = 3;
             profPanelButt.Text = "Teachers";
             profPanelButt.UseVisualStyleBackColor = false;
@@ -158,12 +158,12 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = Color.White;
+            pictureBox4.BackColor = Color.FromArgb(43, 180, 200);
             pictureBox4.Dock = DockStyle.Left;
             pictureBox4.Image = SchoolManagementSystem.Properties.Resources.teacher1;
             pictureBox4.Location = new Point(0, 0);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(63, 74);
+            pictureBox4.Size = new Size(40, 74);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
@@ -188,13 +188,13 @@
             classPanelButt.Dock = DockStyle.Right;
             classPanelButt.FlatAppearance.BorderSize = 0;
             classPanelButt.FlatStyle = FlatStyle.Flat;
-            classPanelButt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            classPanelButt.Font = new Font("Cascadia Mono SemiBold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             classPanelButt.ForeColor = Color.White;
             classPanelButt.ImageAlign = ContentAlignment.MiddleLeft;
-            classPanelButt.Location = new Point(54, 0);
+            classPanelButt.Location = new Point(40, 0);
             classPanelButt.Margin = new Padding(0, 6, 0, 6);
             classPanelButt.Name = "classPanelButt";
-            classPanelButt.Size = new Size(92, 74);
+            classPanelButt.Size = new Size(106, 74);
             classPanelButt.TabIndex = 3;
             classPanelButt.Text = "Classes";
             classPanelButt.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             pictureBox3.Image = SchoolManagementSystem.Properties.Resources.class1;
             pictureBox3.Location = new Point(0, 0);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(55, 74);
+            pictureBox3.Size = new Size(40, 74);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 1;
             pictureBox3.TabStop = false;
@@ -225,18 +225,18 @@
             // studentPanelButt
             // 
             studentPanelButt.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            studentPanelButt.BackColor = Color.White;
+            studentPanelButt.BackColor = Color.FromArgb(43, 180, 200);
             studentPanelButt.BackgroundImageLayout = ImageLayout.Center;
             studentPanelButt.Dock = DockStyle.Right;
             studentPanelButt.FlatAppearance.BorderSize = 0;
             studentPanelButt.FlatStyle = FlatStyle.Flat;
-            studentPanelButt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            studentPanelButt.ForeColor = Color.FromArgb(43, 180, 200);
+            studentPanelButt.Font = new Font("Cascadia Mono SemiBold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            studentPanelButt.ForeColor = Color.White;
             studentPanelButt.ImageAlign = ContentAlignment.MiddleLeft;
-            studentPanelButt.Location = new Point(54, 0);
+            studentPanelButt.Location = new Point(43, 0);
             studentPanelButt.Margin = new Padding(0, 6, 0, 6);
             studentPanelButt.Name = "studentPanelButt";
-            studentPanelButt.Size = new Size(92, 74);
+            studentPanelButt.Size = new Size(103, 74);
             studentPanelButt.TabIndex = 3;
             studentPanelButt.Text = "Students";
             studentPanelButt.UseVisualStyleBackColor = false;
@@ -244,12 +244,12 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackColor = Color.FromArgb(43, 180, 200);
             pictureBox2.Dock = DockStyle.Left;
             pictureBox2.Image = SchoolManagementSystem.Properties.Resources.student1;
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(63, 74);
+            pictureBox2.Size = new Size(40, 74);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
@@ -271,7 +271,7 @@
             controlPanelIcon.Image = SchoolManagementSystem.Properties.Resources.home1;
             controlPanelIcon.Location = new Point(0, 0);
             controlPanelIcon.Name = "controlPanelIcon";
-            controlPanelIcon.Size = new Size(55, 74);
+            controlPanelIcon.Size = new Size(40, 74);
             controlPanelIcon.SizeMode = PictureBoxSizeMode.Zoom;
             controlPanelIcon.TabIndex = 4;
             controlPanelIcon.TabStop = false;
@@ -284,13 +284,13 @@
             controlPanelButt.Dock = DockStyle.Right;
             controlPanelButt.FlatAppearance.BorderSize = 0;
             controlPanelButt.FlatStyle = FlatStyle.Flat;
-            controlPanelButt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            controlPanelButt.Font = new Font("Cascadia Mono SemiBold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             controlPanelButt.ForeColor = Color.White;
             controlPanelButt.ImageAlign = ContentAlignment.MiddleLeft;
-            controlPanelButt.Location = new Point(54, 0);
+            controlPanelButt.Location = new Point(40, 0);
             controlPanelButt.Margin = new Padding(0, 6, 0, 6);
             controlPanelButt.Name = "controlPanelButt";
-            controlPanelButt.Size = new Size(92, 74);
+            controlPanelButt.Size = new Size(106, 74);
             controlPanelButt.TabIndex = 3;
             controlPanelButt.Text = "Control Panel";
             controlPanelButt.UseVisualStyleBackColor = false;
@@ -310,12 +310,12 @@
             // 
             userName.AutoSize = true;
             userName.Dock = DockStyle.Bottom;
-            userName.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            userName.Location = new Point(0, 82);
+            userName.Font = new Font("Cascadia Code", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            userName.Location = new Point(0, 73);
             userName.Name = "userName";
-            userName.Size = new Size(115, 28);
+            userName.Size = new Size(97, 37);
             userName.TabIndex = 1;
-            userName.Text = "User Name";
+            userName.Text = "Admin";
             userName.TextAlign = ContentAlignment.MiddleCenter;
             userName.Click += label2_Click_1;
             // 

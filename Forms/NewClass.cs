@@ -55,6 +55,7 @@ namespace Learning_Managment_System
                 MessageBox.Show("The code is already exist");
                 return;
             }
+            _nav.Display(_nav.controlPanel);
             Close();
         }
 

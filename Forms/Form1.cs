@@ -102,6 +102,7 @@ namespace Learning_Managment_System
             _pf.RemoveAll();
             _cl.RemoveAll();
             _ac.RemoveAll();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

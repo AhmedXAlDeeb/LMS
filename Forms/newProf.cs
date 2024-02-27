@@ -49,6 +49,7 @@ namespace Learning_Managment_System
                 phone = phone.Text,
             };
             _pf.Add(prof);
+            _nav.Display(_nav.controlPanel);
             Close();
         }
 

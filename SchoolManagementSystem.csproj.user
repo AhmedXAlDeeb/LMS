@@ -31,5 +31,8 @@
     <EmbeddedResource Update="panels\ProfessorProfilePanel.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Update="panels\StudentProfilePanel.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

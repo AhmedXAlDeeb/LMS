@@ -20,7 +20,9 @@ namespace DSproject
         private ProfessorService _pf;
         private AccountManager _ac;
         private ClassService _cl;
-
+        private string userName;
+        private string password;
+        private string confirmPassword;
         public SignUP(
          StudentService st
         , AccountManager ac
@@ -38,24 +40,22 @@ namespace DSproject
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            userName = textBox1.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            password = textBox2.Text;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            confirmPassword = textBox3.Text;
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userName = textBox1.Text;
-            string password = textBox2.Text;
-            string confirmPassword = textBox2.Text;
 
             if (password != confirmPassword)
             {
@@ -67,7 +67,9 @@ namespace DSproject
                 {
                     MessageBox.Show("Sign-up successful!");
                     // launching another window
+                    Close();
                     new SignIn(_st, _ac, _nav, _cl, _pf).Show();
+
                 }
                 else
                 {
@@ -75,6 +77,12 @@ namespace DSproject
                 }
             }
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Close();
+            new SignIn(_st, _ac, _nav, _cl, _pf).Show();
         }
     }
 }

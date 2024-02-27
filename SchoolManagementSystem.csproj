@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>profile.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -61,6 +62,7 @@
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="profile.ico" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="temp\" />

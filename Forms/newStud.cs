@@ -65,6 +65,7 @@ namespace Learning_Managment_System
                 phone = phoneInput.Text,
             };
             _st.Add(studnet);
+            _nav.Display(_nav.controlPanel);
             Close();
         }
 

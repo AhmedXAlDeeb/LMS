@@ -125,7 +125,7 @@
             linkLabel1.BackColor = SystemColors.HighlightText;
             linkLabel1.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             linkLabel1.LinkColor = Color.FromArgb(43, 180, 200);
-            linkLabel1.Location = new Point(230, 191);
+            linkLabel1.Location = new Point(257, 191);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(54, 17);
             linkLabel1.TabIndex = 7;

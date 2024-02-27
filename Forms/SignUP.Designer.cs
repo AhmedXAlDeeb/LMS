@@ -38,6 +38,8 @@
             label4 = new Label();
             textBox3 = new TextBox();
             button1 = new Button();
+            linkLabel1 = new LinkLabel();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -145,11 +147,40 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // linkLabel1
+            // 
+            linkLabel1.ActiveLinkColor = Color.FromArgb(43, 180, 200);
+            linkLabel1.AutoSize = true;
+            linkLabel1.BackColor = SystemColors.HighlightText;
+            linkLabel1.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabel1.LinkColor = Color.FromArgb(43, 180, 200);
+            linkLabel1.Location = new Point(232, 192);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(49, 17);
+            linkLabel1.TabIndex = 21;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Sign in";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.HighlightText;
+            label5.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.FromArgb(115, 115, 115);
+            label5.Location = new Point(71, 192);
+            label5.Name = "label5";
+            label5.Size = new Size(164, 17);
+            label5.TabIndex = 20;
+            label5.Text = "Already have an account?";
+            // 
             // SignUP
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(810, 535);
+            Controls.Add(linkLabel1);
+            Controls.Add(label5);
             Controls.Add(button1);
             Controls.Add(textBox3);
             Controls.Add(label4);
@@ -179,5 +210,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
+        private LinkLabel linkLabel1;
+        private Label label5;
     }
 }

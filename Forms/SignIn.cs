@@ -21,6 +21,8 @@ namespace DSproject
         private ProfessorService _pf;
         private AccountManager _ac;
         private ClassService _cl;
+        private string userName;
+        private string password;
 
         public SignIn(
          StudentService st
@@ -35,8 +37,17 @@ namespace DSproject
             _nav = nav;
             _st = st;
             _pf = pf;
-        }
+            //RemoveDummyData();
 
+        }
+        private void RemoveDummyData()
+        {
+            _st.RemoveAll();
+            _pf.RemoveAll();
+            _cl.RemoveAll();
+            _ac.RemoveAll();
+
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -60,12 +71,12 @@ namespace DSproject
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+             password = textBox2.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+             userName = textBox1.Text;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -77,8 +88,6 @@ namespace DSproject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userName = textBox1.Text;
-            string password = textBox2.Text;
 
             if (_ac.SignIn(userName, password))
             {

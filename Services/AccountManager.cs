@@ -27,7 +27,8 @@ namespace SchoolManagementSystem.Services
         }
         public bool SignUp(string userName, string password)
         {
-            var exist = _db.admins.FirstOrDefault(x => x.userName == userName) is not null;
+            var test = _db.admins.FirstOrDefault(x => x.userName == userName);
+            var exist = test is not null;
             if (exist) return false;
             var newAdmin = new Admin()
             {
@@ -46,6 +47,7 @@ namespace SchoolManagementSystem.Services
         public void RemoveAll()
         {
             _db.Database.ExecuteSqlRaw("TRUNCATE TABLE [admins]");
+            _db.SaveChanges();
         }
     }
 }

@@ -48,8 +48,22 @@ namespace SchoolManagementSystem.panels
             TimeLabel.Text = $"{selectedClass.time}";
             codeLabel.Text = selectedClass.code;
             NameLabel.Text = selectedClass.name;
-
-            //label7.Text = $"{_pf.AllClassProfessors(selectedClass.code)[0].firstName} {_pf.AllClassProfessors(selectedClass.code)[0].lastName}";
+            label7.Text = string.Empty;
+            var profs = _pf.AllClassProfessors(selectedClass.code);
+            for(int i = 0; i < 3; i++)
+            {
+                if (profs.Count == i) break;
+                label7.Text += ($"{profs[i].firstName} {profs[i].lastName}\n");
+            }
+            //if(profs.Count == 1)
+            //{ 
+            //    label7.Text = $"{profs[0].firstName} {profs[0].lastName}"; 
+            //}
+            //else if(profs.Count == 2)
+            //{
+            //    label7.Text = $"{profs[0].firstName} {profs[0].lastName}, " +
+            //        $"{profs[1].firstName} {profs[1].lastName}";
+            //}
             if (selectedClass is null) return;
             var students = _st.AllClassStudents(selectedClass.code);
             this.searchResut = students;

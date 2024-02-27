@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfessorProfilePanel));
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle41 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle42 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle44 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle45 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle43 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             profName = new Label();
             profTitle = new Label();
@@ -49,6 +49,11 @@
             addCourse = new Button();
             Edit = new Button();
             Delete = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)StudentsTable).BeginInit();
             SuspendLayout();
@@ -81,7 +86,7 @@
             profTitle.BackColor = SystemColors.ButtonHighlight;
             profTitle.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             profTitle.ForeColor = Color.FromArgb(11, 111, 125);
-            profTitle.Location = new Point(182, 131);
+            profTitle.Location = new Point(231, 131);
             profTitle.Name = "profTitle";
             profTitle.Size = new Size(43, 17);
             profTitle.TabIndex = 3;
@@ -94,11 +99,12 @@
             profID.BackColor = Color.FromArgb(43, 180, 200);
             profID.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             profID.ForeColor = Color.White;
-            profID.Location = new Point(182, 79);
+            profID.Location = new Point(266, 81);
             profID.Name = "profID";
             profID.Size = new Size(43, 17);
             profID.TabIndex = 4;
             profID.Text = "label3";
+            profID.Click += profID_Click;
             // 
             // profAge
             // 
@@ -106,11 +112,12 @@
             profAge.BackColor = SystemColors.ButtonHighlight;
             profAge.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
             profAge.ForeColor = Color.FromArgb(11, 111, 125);
-            profAge.Location = new Point(182, 172);
+            profAge.Location = new Point(231, 172);
             profAge.Name = "profAge";
             profAge.Size = new Size(43, 17);
             profAge.TabIndex = 5;
             profAge.Text = "label4";
+            profAge.Click += profAge_Click;
             // 
             // profEmail
             // 
@@ -141,45 +148,45 @@
             StudentsTable.AllowUserToAddRows = false;
             StudentsTable.AllowUserToDeleteRows = false;
             StudentsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(233, 245, 247);
-            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle41.BackColor = Color.FromArgb(233, 245, 247);
+            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             StudentsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             StudentsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             StudentsTable.BackgroundColor = SystemColors.ControlLight;
             StudentsTable.BorderStyle = BorderStyle.None;
             StudentsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             StudentsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle7.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle42.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle42.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle42.ForeColor = Color.White;
+            dataGridViewCellStyle42.SelectionBackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle42.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = DataGridViewTriState.True;
+            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             StudentsTable.ColumnHeadersHeight = 35;
             StudentsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             StudentsTable.Columns.AddRange(new DataGridViewColumn[] { Name });
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Window;
-            dataGridViewCellStyle9.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = Color.Silver;
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(252, 252, 252);
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            StudentsTable.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle44.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = SystemColors.Window;
+            dataGridViewCellStyle44.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle44.ForeColor = Color.Silver;
+            dataGridViewCellStyle44.SelectionBackColor = Color.FromArgb(252, 252, 252);
+            dataGridViewCellStyle44.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = DataGridViewTriState.False;
+            StudentsTable.DefaultCellStyle = dataGridViewCellStyle44;
             StudentsTable.EnableHeadersVisualStyles = false;
             StudentsTable.Location = new Point(36, 239);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = SystemColors.Control;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle45.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = SystemColors.Control;
+            dataGridViewCellStyle45.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle45.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle45.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle45.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle45.WrapMode = DataGridViewTriState.True;
+            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
             StudentsTable.RowHeadersVisible = false;
             StudentsTable.RowHeadersWidth = 51;
             StudentsTable.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Silver;
@@ -189,14 +196,15 @@
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             StudentsTable.Size = new Size(737, 211);
             StudentsTable.TabIndex = 8;
+            StudentsTable.CellContentClick += StudentsTable_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
             StudentsTable.RowsRemoved += StudentsTable_RowsRemoved;
             // 
             // Name
             // 
-            dataGridViewCellStyle8.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle8.SelectionForeColor = Color.Transparent;
-            Name.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle43.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle43.SelectionForeColor = Color.Transparent;
+            Name.DefaultCellStyle = dataGridViewCellStyle43;
             Name.HeaderText = "Courses";
             Name.MinimumWidth = 6;
             Name.Name = "Name";
@@ -273,10 +281,77 @@
             Delete.UseVisualStyleBackColor = false;
             Delete.Click += Delete_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.ButtonHighlight;
+            label2.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(11, 111, 125);
+            label2.Location = new Point(189, 172);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 17);
+            label2.TabIndex = 18;
+            label2.Text = "Age:";
+            label2.Click += label2_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.ButtonHighlight;
+            label3.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(11, 111, 125);
+            label3.Location = new Point(479, 131);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 17);
+            label3.TabIndex = 19;
+            label3.Text = "Phone:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.ButtonHighlight;
+            label4.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(11, 111, 125);
+            label4.Location = new Point(479, 172);
+            label4.Name = "label4";
+            label4.Size = new Size(43, 17);
+            label4.TabIndex = 20;
+            label4.Text = "Email:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.ButtonHighlight;
+            label5.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.FromArgb(11, 111, 125);
+            label5.Location = new Point(189, 131);
+            label5.Name = "label5";
+            label5.Size = new Size(36, 17);
+            label5.TabIndex = 21;
+            label5.Text = "Title:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(43, 180, 200);
+            label6.Font = new Font("Yu Gothic UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(182, 81);
+            label6.Name = "label6";
+            label6.Size = new Size(78, 17);
+            label6.TabIndex = 22;
+            label6.Text = "ID Number:";
+            label6.Click += label6_Click;
+            // 
             // ProfessorProfilePanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(Edit);
             Controls.Add(Delete);
             Controls.Add(addCourse);
@@ -291,7 +366,7 @@
             Controls.Add(profTitle);
             Controls.Add(profName);
             Controls.Add(pictureBox1);
-            Name.Name = "ProfessorProfilePanel";
+//            Name = "ProfessorProfilePanel";
             Size = new Size(911, 612);
             Load += ProfessorProfilePanel_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -317,5 +392,10 @@
         private Button addCourse;
         private Button Edit;
         private Button Delete;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
     }
 }

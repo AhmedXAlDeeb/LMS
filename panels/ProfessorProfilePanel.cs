@@ -4,6 +4,7 @@ using SchoolManagementSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace SchoolManagementSystem.panels
         private StudentService _st;
         private ProfessorService _pf;
         public static Professor? selectedProfessor;
+        List<Class> ProfessorsClaasses = new List<Class>();
         public ProfessorProfilePanel(ControlsService nav, ClassService cl, StudentService st, ProfessorService pf)
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace SchoolManagementSystem.panels
             _cl = cl;
             _st = st;
             _pf = pf;
+            List<Class> ProfessorsClaasses = new List<Class>();
         }
 
         private void ProfessorProfilePanel_Load(object sender, EventArgs e)
@@ -35,6 +38,7 @@ namespace SchoolManagementSystem.panels
         }
         public void InitalaizeTable()
         {
+            StudentsTable.Rows.Clear();
             if (selectedProfessor != null)
             {
                 profName.Text = $" {selectedProfessor.firstName} {selectedProfessor.lastName}";
@@ -49,6 +53,14 @@ namespace SchoolManagementSystem.panels
                 comboBox1.Items.Clear();
                 stClasses.ForEach(x => classes.Remove(x));
                 classes.ForEach(x => comboBox1.Items.Add(x.code));
+            }
+            this.ProfessorsClaasses = _cl.GetProfClasses(selectedProfessor);
+            for (int i = 0; i < this.ProfessorsClaasses.Count; i++)
+            {
+                StudentsTable.Rows.Add(new object[]
+                {
+                    $"{this.ProfessorsClaasses[i].name}"
+                });
             }
         }
 
@@ -101,6 +113,32 @@ namespace SchoolManagementSystem.panels
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             addCourse.Enabled = true;
+        }
+        private void StudentsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var selcted = this.ProfessorsClaasses[e.RowIndex];
+            _nav.Display(_nav.classProfilePanel, this.ProfessorsClaasses[e.RowIndex]);
+        }
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profAge_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profID_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
