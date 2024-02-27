@@ -230,6 +230,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(402, 28);
             comboBox1.TabIndex = 12;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // addCourse
             // 
@@ -243,6 +244,7 @@
             addCourse.TabIndex = 13;
             addCourse.Text = "Add";
             addCourse.UseVisualStyleBackColor = false;
+            addCourse.Click += addCourse_Click;
             // 
             // Delete
             // 

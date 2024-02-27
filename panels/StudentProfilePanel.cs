@@ -57,6 +57,13 @@ namespace SchoolManagementSystem.panels
                 stuPhone.Text = $"{selectedStudent.phone}";
                 stuGrade.Text = $"{selectedStudent.grade}";
                 stuID.Text = $"{selectedStudent.id}";
+
+                addCourse.Enabled = false;
+                var stClasses = _cl.GetStudentClasses(selectedStudent);
+                var classes = _cl.GetAll();
+                comboBox1.Items.Clear();
+                stClasses.ForEach(x => classes.Remove(x));
+                classes.ForEach(x => comboBox1.Items.Add(x.code));
             }
         }
 
@@ -105,6 +112,20 @@ namespace SchoolManagementSystem.panels
             _st.Remove(selectedStudent);
             _nav.Display(_nav.studentsPanel);
             MessageBox.Show($"student {selectedStudent.firstName + selectedStudent.lastName} is deleted");
+        }
+
+        private void addCourse_Click(object sender, EventArgs e)
+        {
+            addCourse.Enabled = false;
+            comboBox1.Text = string.Empty;
+            _st.AssignToClass(selectedStudent,comboBox1.SelectedItem.ToString());
+            MessageBox.Show($"{selectedStudent.firstName} {selectedStudent.lastName} assigned to class {comboBox1.SelectedItem}");
+            _nav.Display(_nav.studentProfilePanel, selectedStudent);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            addCourse.Enabled= true;
         }
     }
 }

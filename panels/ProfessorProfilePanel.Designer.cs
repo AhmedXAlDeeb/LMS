@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfessorProfilePanel));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             profName = new Label();
             profTitle = new Label();
@@ -141,45 +141,45 @@
             StudentsTable.AllowUserToAddRows = false;
             StudentsTable.AllowUserToDeleteRows = false;
             StudentsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(233, 245, 247);
-            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(233, 245, 247);
+            StudentsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             StudentsTable.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             StudentsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             StudentsTable.BackgroundColor = SystemColors.ControlLight;
             StudentsTable.BorderStyle = BorderStyle.None;
             StudentsTable.CellBorderStyle = DataGridViewCellBorderStyle.None;
             StudentsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle2.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(43, 180, 200);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle7.Font = new Font("Cooper Black", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(43, 180, 200);
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            StudentsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             StudentsTable.ColumnHeadersHeight = 35;
             StudentsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             StudentsTable.Columns.AddRange(new DataGridViewColumn[] { Name });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Window;
-            dataGridViewCellStyle4.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(252, 252, 252);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            StudentsTable.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Window;
+            dataGridViewCellStyle9.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = Color.Silver;
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(252, 252, 252);
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
+            StudentsTable.DefaultCellStyle = dataGridViewCellStyle9;
             StudentsTable.EnableHeadersVisualStyles = false;
             StudentsTable.Location = new Point(36, 239);
             StudentsTable.Name = "StudentsTable";
             StudentsTable.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Control;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            StudentsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             StudentsTable.RowHeadersVisible = false;
             StudentsTable.RowHeadersWidth = 51;
             StudentsTable.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.Silver;
@@ -194,9 +194,9 @@
             // 
             // Name
             // 
-            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Transparent;
-            Name.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle8.SelectionForeColor = Color.Transparent;
+            Name.DefaultCellStyle = dataGridViewCellStyle8;
             Name.HeaderText = "Courses";
             Name.MinimumWidth = 6;
             Name.Name = "Name";
@@ -229,6 +229,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(402, 28);
             comboBox1.TabIndex = 11;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // addCourse
             // 
@@ -242,6 +243,7 @@
             addCourse.TabIndex = 12;
             addCourse.Text = "Add";
             addCourse.UseVisualStyleBackColor = false;
+            addCourse.Click += addCourse_Click;
             // 
             // Edit
             // 

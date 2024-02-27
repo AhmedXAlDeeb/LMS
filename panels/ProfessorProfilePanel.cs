@@ -43,6 +43,12 @@ namespace SchoolManagementSystem.panels
                 profAge.Text = $"{selectedProfessor.age}";
                 profEmail.Text = $"{selectedProfessor.email}";
                 profPhone.Text = $"{selectedProfessor.phone}";
+                addCourse.Enabled = false;
+                var stClasses = _cl.GetProfClasses(selectedProfessor);
+                var classes = _cl.GetAll();
+                comboBox1.Items.Clear();
+                stClasses.ForEach(x => classes.Remove(x));
+                classes.ForEach(x => comboBox1.Items.Add(x.code));
             }
         }
 
@@ -81,6 +87,20 @@ namespace SchoolManagementSystem.panels
             _pf.Remove(selectedProfessor);
             _nav.Display(_nav.studentsPanel);
             MessageBox.Show($"professor {selectedProfessor.firstName + selectedProfessor.lastName} is deleted");
+        }
+
+        private void addCourse_Click(object sender, EventArgs e)
+        {
+            addCourse.Enabled = false;
+            comboBox1.Text = string.Empty;
+            _pf.AssignToClass(selectedProfessor, comboBox1.SelectedItem.ToString());
+            MessageBox.Show($"{selectedProfessor.firstName} {selectedProfessor.lastName} assigned to class {comboBox1.SelectedItem}");
+            _nav.Display(_nav.professorProfilePanel, selectedProfessor);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            addCourse.Enabled = true;
         }
     }
 }
