@@ -117,5 +117,15 @@ namespace SchoolManagementSystem.panels
             _nav.Display(_nav.studentsPanel);
             MessageBox.Show($"student {selectedStudent.firstName + selectedStudent.lastName} is deleted");
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stuAge_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

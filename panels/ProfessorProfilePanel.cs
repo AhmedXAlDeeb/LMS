@@ -53,7 +53,7 @@ namespace SchoolManagementSystem.panels
             {
                 StudentsTable.Rows.Add(new object[]
                 {
-                    $"{this.ProfessorsClaasses[i].name}" 
+                    $"{this.ProfessorsClaasses[i].name}"
                 });
             }
         }
@@ -102,6 +102,26 @@ namespace SchoolManagementSystem.panels
         }
 
         private void addCourse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profAge_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profID_Click(object sender, EventArgs e)
         {
 
         }
