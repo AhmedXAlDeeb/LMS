@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Models;
+﻿using Learning_Managment_System;
+using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -68,6 +69,18 @@ namespace SchoolManagementSystem.panels
         private void profTitle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            new EditProf(_st, _nav, _cl, _pf, selectedProfessor).Show();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            _pf.Remove(selectedProfessor);
+            _nav.Display(_nav.studentsPanel);
+            MessageBox.Show($"professor {selectedProfessor.firstName + selectedProfessor.lastName} is deleted");
         }
     }
 }

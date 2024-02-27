@@ -18,12 +18,10 @@ namespace Learning_Managment_System
         private ControlsService _nav;
         private StudentService _st;
         private ProfessorService _pf;
-        private AccountManager _ac;
         private ClassService _cl;
         private Class toEdit;
         public EditClass(
  StudentService st
-, AccountManager accountManager
 , ControlsService nav
 , ClassService cl
 , ProfessorService pf,
@@ -32,7 +30,6 @@ Class toEdit)
             InitializeComponent();
             _st = st;
             _nav = nav;
-            _ac = accountManager;
             _cl = cl;
             _pf = pf;
             this.toEdit = toEdit;
@@ -78,6 +75,7 @@ Class toEdit)
                 MessageBox.Show("Some data is invalid");
                 return;
             }
+            _nav.Display(_nav.classProfilePanel, toEdit);
             Close();
         }
     }

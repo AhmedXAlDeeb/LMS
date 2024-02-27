@@ -17,12 +17,10 @@ namespace Learning_Managment_System
         private ControlsService _nav;
         private StudentService _st;
         private ProfessorService _pf;
-        private AccountManager _ac;
         private ClassService _cl;
         private Student toEdit;
         public EditStud(
          StudentService st
-        , AccountManager accountManager
         , ControlsService nav
         , ClassService cl
         , ProfessorService pf,
@@ -30,7 +28,6 @@ Student toEdit)
         {
             _st = st;
             _nav = nav;
-            _ac = accountManager;
             _cl = cl;
             _pf = pf;
             InitializeComponent();
@@ -39,11 +36,12 @@ Student toEdit)
         protected override void OnVisibleChanged(EventArgs e)
         {
             base.OnVisibleChanged(e);
-            firstName.Text = toEdit.firstName;
-            lastName.Text = toEdit.lastName;
-            email.Text = toEdit.email;
-            phone.Text = toEdit.phone;
-            gradeInput.Text = toEdit.grade.ToString();
+            firstNameInput.Text = toEdit.firstName;
+            lastNameInput.Text = toEdit.lastName;
+            emailInput.Text = toEdit.email;
+            phoneInput.Text = toEdit.phone;
+            ageInput.Text = toEdit.age.ToString();
+            textBox1.Text = toEdit.grade.ToString();
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -70,11 +68,13 @@ Student toEdit)
 
             toEdit.firstName = firstNameInput.Text;
             toEdit.lastName = lastNameInput.Text;
-            toEdit.age = int.Parse(ageInput.Text);
+            if(ageInput.Text.Length != 0)
+                toEdit.age = int.Parse(ageInput.Text);
             toEdit.email = emailInput.Text;
             toEdit.phone = phoneInput.Text;
-            toEdit.grade = int.Parse(gradeInput.Text);
+            toEdit.grade = int.Parse(textBox1.Text);
             _st.Update(toEdit);
+            _nav.Display(_nav.studentProfilePanel,toEdit);
             Close();
         }
 
@@ -96,8 +96,8 @@ Student toEdit)
         {
             if (!char.IsAsciiDigit(ageInput.Text.LastOrDefault()))
             {
-                if (gradeInput.Text.Length > 0)
-                    gradeInput.Text.Remove(Text.Length - 1);
+                if (textBox1.Text.Length > 0)
+                    textBox1.Text.Remove(textBox1.Text.Length - 1);
             }
         }
     }

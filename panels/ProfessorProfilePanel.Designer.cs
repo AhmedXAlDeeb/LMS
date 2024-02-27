@@ -47,6 +47,8 @@
             label1 = new Label();
             comboBox1 = new ComboBox();
             addCourse = new Button();
+            Edit = new Button();
+            Delete = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)StudentsTable).BeginInit();
             SuspendLayout();
@@ -241,10 +243,40 @@
             addCourse.Text = "Add";
             addCourse.UseVisualStyleBackColor = false;
             // 
+            // Edit
+            // 
+            Edit.BackColor = Color.DarkGray;
+            Edit.FlatStyle = FlatStyle.Flat;
+            Edit.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Edit.ForeColor = Color.White;
+            Edit.Location = new Point(716, 530);
+            Edit.Name = "Edit";
+            Edit.Size = new Size(80, 29);
+            Edit.TabIndex = 17;
+            Edit.Text = "Edit";
+            Edit.UseVisualStyleBackColor = false;
+            Edit.Click += Edit_Click;
+            // 
+            // Delete
+            // 
+            Delete.BackColor = Color.Red;
+            Delete.FlatStyle = FlatStyle.Flat;
+            Delete.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Delete.ForeColor = Color.White;
+            Delete.Location = new Point(815, 530);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(80, 29);
+            Delete.TabIndex = 16;
+            Delete.Text = "Delete";
+            Delete.UseVisualStyleBackColor = false;
+            Delete.Click += Delete_Click;
+            // 
             // ProfessorProfilePanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(Edit);
+            Controls.Add(Delete);
             Controls.Add(addCourse);
             Controls.Add(comboBox1);
             Controls.Add(label1);
@@ -257,7 +289,7 @@
             Controls.Add(profTitle);
             Controls.Add(profName);
             Controls.Add(pictureBox1);
-            this.Name.Name = "ProfessorProfilePanel";
+            Name.Name = "ProfessorProfilePanel";
             Size = new Size(911, 612);
             Load += ProfessorProfilePanel_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -281,5 +313,7 @@
         private Label label1;
         private ComboBox comboBox1;
         private Button addCourse;
+        private Button Edit;
+        private Button Delete;
     }
 }

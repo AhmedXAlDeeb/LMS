@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Models;
+﻿using Learning_Managment_System;
+using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace SchoolManagementSystem.panels
         private ProfessorService _pf;
         public static Student? selectedStudent;
 
-        
+
         public StudentProfilePanel(ControlsService nav, ClassService cl, StudentService st, ProfessorService pf)
         {
             InitializeComponent();
@@ -94,5 +95,16 @@ namespace SchoolManagementSystem.panels
             StudentsTable.FirstDisplayedScrollingRowIndex = StudentsTable.Rows[e.OldValue].Index;
         }
 
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            new EditStud(_st, _nav, _cl, _pf, selectedStudent).Show();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            _st.Remove(selectedStudent);
+            _nav.Display(_nav.studentsPanel);
+            MessageBox.Show($"student {selectedStudent.firstName + selectedStudent.lastName} is deleted");
+        }
     }
 }

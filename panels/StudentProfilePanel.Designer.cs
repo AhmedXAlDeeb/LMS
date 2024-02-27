@@ -47,6 +47,8 @@
             label1 = new Label();
             comboBox1 = new ComboBox();
             addCourse = new Button();
+            Delete = new Button();
+            Edit = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)StudentsTable).BeginInit();
             SuspendLayout();
@@ -242,10 +244,40 @@
             addCourse.Text = "Add";
             addCourse.UseVisualStyleBackColor = false;
             // 
+            // Delete
+            // 
+            Delete.BackColor = Color.Red;
+            Delete.FlatStyle = FlatStyle.Flat;
+            Delete.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Delete.ForeColor = Color.White;
+            Delete.Location = new Point(807, 531);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(80, 29);
+            Delete.TabIndex = 14;
+            Delete.Text = "Delete";
+            Delete.UseVisualStyleBackColor = false;
+            Delete.Click += Delete_Click;
+            // 
+            // Edit
+            // 
+            Edit.BackColor = Color.DarkGray;
+            Edit.FlatStyle = FlatStyle.Flat;
+            Edit.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Edit.ForeColor = Color.White;
+            Edit.Location = new Point(708, 531);
+            Edit.Name = "Edit";
+            Edit.Size = new Size(80, 29);
+            Edit.TabIndex = 15;
+            Edit.Text = "Edit";
+            Edit.UseVisualStyleBackColor = false;
+            Edit.Click += Edit_Click;
+            // 
             // StudentProfilePanel
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(Edit);
+            Controls.Add(Delete);
             Controls.Add(addCourse);
             Controls.Add(comboBox1);
             Controls.Add(label1);
@@ -282,5 +314,7 @@
         private Label label1;
         private ComboBox comboBox1;
         private Button addCourse;
+        private Button Delete;
+        private Button Edit;
     }
 }

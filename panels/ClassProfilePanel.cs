@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.Models;
+﻿using Learning_Managment_System;
+using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -159,6 +160,18 @@ namespace SchoolManagementSystem.panels
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            new EditClass(_st, _nav, _cl, _pf, selectedClass).Show();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            _cl.Remove(selectedClass);
+            _nav.Display(_nav.classesPanel);
+            MessageBox.Show($"class {selectedClass.name} is deleted");
         }
     }
 }

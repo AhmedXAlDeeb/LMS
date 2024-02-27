@@ -17,12 +17,10 @@ namespace Learning_Managment_System
         private ControlsService _nav;
         private StudentService _st;
         private ProfessorService _pf;
-        private AccountManager _ac;
         private ClassService _cl;
         private Professor toEdit;
         public EditProf(
  StudentService st
-, AccountManager accountManager
 , ControlsService nav
 , ClassService cl
 , ProfessorService pf,
@@ -31,7 +29,6 @@ Professor toEdit)
             InitializeComponent();
             _st = st;
             _nav = nav;
-            _ac = accountManager;
             _cl = cl;
             _pf = pf;
             this.toEdit = toEdit;
@@ -56,6 +53,7 @@ Professor toEdit)
             toEdit.email = email.Text;
             toEdit.phone = phone.Text;
             _pf.Update(toEdit);
+            _nav.Display(_nav.professorProfilePanel, toEdit);
             Close();
         }
 
