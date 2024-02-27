@@ -189,6 +189,7 @@
             StudentsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             StudentsTable.Size = new Size(737, 211);
             StudentsTable.TabIndex = 8;
+            StudentsTable.CellContentClick += StudentsTable_CellContentClick;
             StudentsTable.RowsAdded += StudentsTable_RowsAdded;
             StudentsTable.RowsRemoved += StudentsTable_RowsRemoved;
             // 
@@ -242,6 +243,7 @@
             addCourse.TabIndex = 12;
             addCourse.Text = "Add";
             addCourse.UseVisualStyleBackColor = false;
+            addCourse.Click += addCourse_Click;
             // 
             // Edit
             // 
@@ -289,7 +291,7 @@
             Controls.Add(profTitle);
             Controls.Add(profName);
             Controls.Add(pictureBox1);
-            Name.Name = "ProfessorProfilePanel";
+//            Name = "ProfessorProfilePanel";
             Size = new Size(911, 612);
             Load += ProfessorProfilePanel_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

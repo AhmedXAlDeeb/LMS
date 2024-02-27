@@ -20,6 +20,7 @@ namespace SchoolManagementSystem.panels
         private StudentService _st;
         private ProfessorService _pf;
         public static Student? selectedStudent;
+        List<Class> StudentClasses = new List<Class>();
 
 
         public StudentProfilePanel(ControlsService nav, ClassService cl, StudentService st, ProfessorService pf)
@@ -49,6 +50,7 @@ namespace SchoolManagementSystem.panels
         }
         public void InitalaizeTable()
         {
+            StudentsTable.Rows.Clear();
             if (selectedStudent != null)
             {
                 stuName.Text = $" {selectedStudent.firstName} {selectedStudent.lastName}";
@@ -57,6 +59,14 @@ namespace SchoolManagementSystem.panels
                 stuPhone.Text = $"{selectedStudent.phone}";
                 stuGrade.Text = $"{selectedStudent.grade}";
                 stuID.Text = $"{selectedStudent.id}";
+            }
+            this.StudentClasses = _cl.GetStudentClasses(selectedStudent);
+            for (int i = 0; i < this.StudentClasses.Count; i++)
+            {
+                StudentsTable.Rows.Add(new object[]
+                {
+                    $"{this.StudentClasses[i].name}"
+                });
             }
         }
 
@@ -77,7 +87,8 @@ namespace SchoolManagementSystem.panels
 
         private void StudentsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            var selcted = this.StudentClasses[e.RowIndex];
+            _nav.Display(_nav.classProfilePanel, this.StudentClasses[e.RowIndex]);
         }
 
         private void StudentsTable_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)

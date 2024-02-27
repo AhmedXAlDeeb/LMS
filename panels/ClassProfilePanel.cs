@@ -48,8 +48,10 @@ namespace SchoolManagementSystem.panels
             TimeLabel.Text = $"{selectedClass.time}";
             codeLabel.Text = selectedClass.code;
             NameLabel.Text = selectedClass.name;
-
-            label7.Text = $"{_pf.AllClassProfessors(selectedClass.code)[0].firstName} {_pf.AllClassProfessors(selectedClass.code)[0].lastName}";
+            if(_pf.AllClassProfessors(selectedClass.code).Count > 0)
+            { 
+                label7.Text = $"{_pf.AllClassProfessors(selectedClass.code)[0].firstName} {_pf.AllClassProfessors(selectedClass.code)[0].lastName}"; 
+            }
             if (selectedClass is null) return;
             var students = _st.AllClassStudents(selectedClass.code);
             this.searchResut = students;
